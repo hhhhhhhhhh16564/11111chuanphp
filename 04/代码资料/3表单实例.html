@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+
+<body>
+<form name="form1" id="form1" method="post" action="register.php" enctype="multipart/form-data">
+<table width="500" align="center" border="1" bordercolor="#CCCCCC" cellpadding="5" style="border-collapse:collapse;">
+	<tr>
+		<td colspan="2"><b>1、用户注册信息表</b></td>
+	</tr>
+	<tr>
+		<td align="right" width="100">用户名：</td>
+		<td><input type="text" name="username" size="30" value="请输入你的用户名" maxlength="20" /></td>
+	</tr>
+	<tr>
+		<td align="right">密码：</td>
+		<td><input type="password" name="userpwd" size="30" maxlength="20" /></td>
+	</tr>
+	<tr>
+		<td align="right">重复密码：</td>
+		<td><input type="password" name="repwd" size="30" maxlength="20" /></td>
+	</tr>
+	<tr>
+		<td align="right">真实姓名：</td>
+		<td><input type="text" name="name" size="30" /></td>
+	</tr>
+	<tr>
+		<td align="right">性别：</td>
+		<td><input type="radio" name="sex" checked="checked" value="先生" />先生
+			<input type="radio" name="sex" value="女士" />女士
+		</td>
+	</tr>
+	<tr>
+		<td align="right">爱好：</td>
+		<td><input type="checkbox" name="hobby" checked="checked" value="游戏" />游戏
+			<input type="checkbox" name="hobby" value="电脑" />电脑
+			<input type="checkbox" name="hobby" value="上蜘蛛网" />上蜘蛛网
+			<input type="checkbox" name="hobby" value="看书" />看书
+		</td>
+	</tr>
+	<tr>
+		<td align="right">学历：</td>
+		<td>
+			<select name="edu">
+				<option value="" selected="selected">请选择...</option>
+				<option value="高中">高中</option>
+				<option value="大专">大专</option>
+				<option value="大本">大本</option>
+				<option value="研究猪">研究生sadadadasa</option>
+			</select>
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right">上传头像：</td>
+		<td><input type="file" name="uploadFile" /></td>
+	</tr>
+	<tr>
+		<td align="right">自我介绍：</td>
+		<td><textarea name="intro" cols="40" rows="5">请填写你的个人信息</textarea></td>
+	</tr>
+	<tr>
+		<td align="right">&nbsp;</td>
+		<td>
+			<input type="submit" value="提交表单" />
+			<input type="reset" value="重新填写" />
+			<input type="button" value="提交表单" onclick="javascript:this.form.submit()" />
+			<input type="image" src="images/btn01.jpg" />
+		</td>
+	</tr>
+</table>
+</form>
+</body>
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+        <form action="login.php" name="form1" id="form1" method="get" align="center">
+
+        用户名: <input type="text" name="username" size="40">
+          密码: <input type="text" name="password" size="40">
+                <input type="submit" value="提交表单">
+        </form>
+        
+
+
+        <form action="login.php" name="form2" method="post" enctype="Multipart/form-data">
+            
+            <table width="500" align="center" border="1" cellpadding="5" bordercolor="#cccccc"
+            style="border-collapse: collapse;">
+
+
+            <tr align="left">
+                <td colspan="2"><b>1、用户注册信息表</b></td>
+            </tr>
+            
+            <tr>
+                <td align="right">用户名:</td>
+                <td>
+                    <input type="text" name="username" size="30" value="请输入你的用户名" maxlength="20" >
+
+
+                </td>
+            </tr>
+
+            <tr>
+                <td align="right">密码:</td>
+                <td>
+                <input type="password" name="userpwd" size="30" maxlength="20">
+
+                </td>
+            </tr>
+           
+
+           <tr>
+                <td align="right">重复密码:</td>
+                <td>
+                <input type="password" name="repwd" size="30" maxlength="20">
+                </td>
+            </tr>
+            
+            <tr>
+                <td align="right">真实姓名:</td>
+                <td><input type="text" name="name" size="30"></td>
+            </tr>
+
+
+
+            <tr>
+                <td align="right">性别</td>
+                <td>
+                    <input type="radio" size="30" name="sex" checked="checked" value="先生">先生
+                    <input type="radio" size="30" name="sex" value="女士">女士
+
+                </td>
+            </tr>
+
+
+            <tr>
+                <td align="right">爱好</td>
+                <td>
+                    <input type="checkbox" name="hobby" checked="checked" value="游戏">游戏
+                    <input type="checkbox" name="hobby" checked="checked" value="电脑">电脑
+                    <input type="checkbox" name="hobby" value="上蜘蛛网">上蜘蛛网
+                    <input type="checkbox" name="hobby" value="看书"> 看书
+
+
+                </td>
+            </tr>
+
+            
+            <tr>
+                <td align="right">学历:</td>
+                <td>
+                    <select name="edu">
+                        <option value="" selected="selected">请选择......</option>
+                        <option value="高中">高中</option>
+                        <option value="大专">大专</option>
+                        <option value="大本">大本</option>
+                        <option value="研究猪">研究生</option>
+
+                    </select>
+
+
+                </td>
+            </tr>
+
+
+            <tr>
+                <td align="right">上传头像</td>
+                <td>
+                    <input type="file" name="uploadfile">
+
+                </td>
+            
+
+            </tr>
+
+            <tr>
+                <td align="right"> 自我介绍</td>
+                <td>
+                    <textarea name="into" id="into" cols="30" rows="10">请填写你的个人信息</textarea>
+
+                </td>
+            </tr>
+
+            
+            <tr>
+                <td align="right">&nbsp;</td>
+                <td>
+                    <input type="submit" value="提交表单">
+                    <input type="reset" value="重新填写">
+                    <input type="button" value="提交表单" onclick="javascript:this.form2.submit()">
+                    <input type="image" src="images/btn01.jpg">
+
+                </td>
+              
+
+
+
+
+            </tr>
+
+
+
+
+
+
+            </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </form>
+
+        
+
+
+   </body>
+</html>
+
+
+
+<!-- 
+
+表单
+1、表单的主要作用：收集用户信息的。
+2、表单的工作原理
+    1）填写有表单的网页，点击“提交按钮”进行提交；
+    2）表单数据，通过互联网传递到了服务器
+    3）服务器上有专门的程序，对提交的表单数据进行验证；
+    4）如果验证通过，直接写入数据库；
+    5）如果验证失败，将返回一个错误信息；
+因此，表单的开发分两个部分，一是前台表单页面的制作和排版，二是后台PHP程序对表单数据的验证和写入数据库。
+
+3、实例：用户登录的表单
+<form name=“form1”>
+    用户名：<input type="text" name="username" size="40" />
+    密码：<input type="password" name="password" size="40" />
+    <input type="submit" name="submit" value="提交表单" />
+</form>
+
+4、<form>标记常用属性
+    Name：表单的名称，用于JS来操作或控制表单时使用；
+    Id：表单的名称，用于JS来操作或控制表单时使用；
+    Action：指定表单数据的处理程序，一般是PHP，如：action=“login.php”
+    Method：表单数据的提交方式，一般取值：get(默认)和post
+        GET方式：将表单数据，以“name=value”形式追加到action指定的处理程序的后面，两者间用“?”隔开，每一个表单的“name=value”间用“&”号隔开。
+        file:///E:/itcast/20140706/lesson/day4/login.php?username=admin&password=admin1234&submit=提交表单
+        特点：只适合提交少量信息，并且不太安全(不要提交敏感数据)、提交的数据类型只限于ASCII字符。
+        POST方式：将表单数据直接发送(隐藏)到action指定的处理程序。POST发送的数据不可见。
+        Action指定的处理程序可以获取到表单数据。
+        特点：可以提交海量信息，相对来说安全一些，提交的数据格式是多样的(Word、Excel、rar、img)
+    Enctype：表单数据的编码方式(加密方式)，取值：application/x-www-form-urlencoded、multipart/form-data
+        Enctype只能在POST方式下使用。
+        Application/x-www-form-urlencoded默认加密方式：除了上传文件之外的数据都可以
+        Multipart/form-data：上传附件时，必须使用这种编码方式。
+
+5、单行文本框：用户名中、邮箱、QQ号、公司地址等
+    <input  type=“text” name=“name” value=“默认值” size=“宽度” maxlength=“最大字符数” />
+    Type：指定文本框的类型，取值：text(文本框)、password(密码)、radio(单选)、checkbox(复选框)
+    Name：指定文本框的名称
+    Value：指文本框中默认显示的文本；
+    Size：指文本框的宽度(字符数)
+    Maxlength：最大可以输入多少个字符
+    
+    注意：表单和表格嵌套时，是在<form>标记中赋套<table>标记。
+
+6、单行密码框
+    <input  type=“password”name=“name”size=“”maxlength=“” />
+
+7、单选项
+    <input  type=“radio”name=“sex”value=“先生”checked=“checked” />先生
+    <input  type=“radio”name=“sex”value=“女士” />女士
+    Checked属性：是默认选择其中一项。
+    提示：单选是一组相互排斥的选项，每次只能选择一个，不能同时选择多个。
+
+8、复选框：同时选择多个，也可以一个都不选
+    <input  type=“checkbox” name=“hobby”value=“游戏” checked=“checked” />游戏
+    <input  type=“checkbox” name=“hobby”value=“杀人” />杀人
+    <input  type=“checkbox” name=“hobby”value=“吹牛” />吹牛
+    Checked属性：默认选中哪几个选项
+    提示：复选框也是一组选项，名称是一样的，最终用PHP来获取值时，将产生一个数组(一个名称好几个不同的值)的结果。
+
+9、上传文件
+    <input  type=“file”name=“uploadFile” />
+    提示：如果要限制上传文件的类型，需要配合JS来实现验证。对上传文件的安全检查：一是扩展名的检查，二是文件数据内容的检查。
+    
+10、文本区域
+    <textarea  name=“name” cols=“宽度” rows=“高度”>默认的显示文本</textarea>
+
+11、下拉列表
+    <select  name=“city”>
+        <option  value=“北京市”selected=“selected”>北京市</option>
+        <option  value=“天津市”>天津市</option>
+    </select> 
+    
+    Selected属性：是默认选中一个下拉列表项；
+    
+12、提交按钮、重置按钮、普通按钮、图片按钮
+    提交按钮：<input  type=“submit” name=“submit” value=“提交表单” />
+    注意：如果按钮上的文本，不想发送到服务，可以不用加name属性。
+    重置按钮：<input  type=“reset” name=“reset”  value=“重新填写” />
+    普通按钮：<input  type=“button” name=“button” value=“普通按钮”/>
+<input type="button" value="提交表单" onclick="javascript:this.form.submit()" />
+        普通按钮没有任何功能，既不会提交表单，也不会重置表单；如果想实现“提交”“重置”功能，将需要配合JS来实现。
+    图片按钮：<input  type=“image” src=“图片的URL”/>
+        图片按钮的默认动作，就是提交表单。
+
+ -->

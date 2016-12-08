@@ -1,0 +1,77 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+    .news>.title {
+        background-color: #FFCC66;
+    }
+    
+    .news li {
+        width: 400px;
+        border: 1px solid #FF4ADE;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="news">
+        <div class="title">
+            <h2>娱乐新闻</h2>
+        </div>
+        <div class="content">
+            <li class="title"><a href="#">公司简介</a></li>
+            <li><a href="#">公司成立三周年</a></li>
+            <li><a href="#">公司简介</a></li>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<!-- CSS选择器：给哪一个HTML标记加样式
+基本选择器
+（1）通用选择器(*)
+格式：*{font-size:24px;}
+说明：通用选择器(*)，将匹配所有的HTML标记。
+注意：通用选择器(*)，IE6不支持，建议尽量少用。
+（2）标签选择器，对应于所学的HTML标记
+    格式：h1{color:#FF0000;}
+    举例： h2{color:#FF0000;}
+p{font-size:14px;line-height:150%;color:#9900CC;}
+li{color:#0000ff;text-decoration:underline;cursor:pointer;}
+（3）类样式：就是给一类HTML元素添加样式，类样式以“.”开头。(使用最多的样式)
+    可以同时给多个HTML元素增加class属性，class属性的值可以一样。
+    <div class=“news”>Welcome to Guangzhou</div>
+    <p  class=“news”>这是一个段落</p>
+    <style  type=“text/css”>
+    .news{ color:#FF0000; font-size:24px; }
+</style>
+（4）id选择器：给标记特定id属性的HTML元素添加样式，id选择器必须以“#”开头。（使用最少的样式）
+    HTML元素的id属性的值，必须唯一。
+    Id属性就相当于身份证号一样，不能重复；
+    HTML元素的id属性，一般是给JS使用；
+    <div  id=“box”></div>
+    <style  type=“text/css”>
+    #box{color:#FF0000;}
+</style>
+
+二、组合选择器
+（1）多元素选择器：E,F,G,H{color:#FF0000;}
+    说明：同时给E元素、F元素、G元素、H元素增加样式，多个元素间用逗号隔开
+    body,div,ul,li,ol,dt,dd,p,form,a{ margin:0px; padding:0px; }
+    div.box,div#header,form{ color:#FF0000; }
+    div.box含义：class=“box”的<div>元素；
+    div#header含义：id=“header”的<div>元素；
+（2）后代元素选择器
+    格式：E  F{color:#FF0000;}
+    说明：E元素的所有后代的F元素，增加样式，中间用空格隔开
+    .news  li{width:400px;border:1px solid #006600;}
+
+（3）子元素选择器
+    格式：E > F{color:#FF0000}
+    说明：匹配E元素的子元素F，增加样式
+    举例：.news > .title{background-color:#FFCC66;}
+ -->

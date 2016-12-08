@@ -1,29 +1,84 @@
+
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
 <html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <title>Document</title>
 </head>
-        
-    <frameset rows="64,*" frameborder="0">
-        <frame src="top.html" noresize="noresize" scrolling="no" />
 
-        <frameset cols="182,*" frameborder="0">
-            
-            <frame src="left.html" noresize="noresize" />
-            <frame src="main.html" name="mainFrame" />
-
-        </frameset>
-
-    
-
-
-
-
+<frameset rows="64,*" frameborder="yes" border="20">
+    <frame src="top.html" noresize="noresize" scrolling="no" />
+    <frameset cols="182,*" frameborder="0">
+        <frame src="left.html" noresize="noresize" />
+        <frame src="main.html" name="mainFrame" />
     </frameset>
+</frameset>
 
 
-        
-
+<!-- <frameset rows="64,*" frameborder="yes" border="20">
+    <frame src="top.html" scrolling="no" />
+    <frameset cols="182,*" frameborder="yes">
+        <frame src="left.html"  />
+        <frame src="main.html" name="mainFrame" />
+    </frameset>
+</frameset> -->
 
 </html>
+<!-- 学习手册的制作：它其实就是网页框架的制作，生成电子书的一具。“电子书制作工具”关键字。
+框架主要应用于：电子书、帮助手册、企业网站的后台管理等。
+框架技术，对于低版本的浏览器一般不支持，IE浏览器支持最好，Firefox浏览支持不太好。
+网站前后一般不用框架实现，网站后台一般用框架实现。
+
+框架技术：它就是将一个浏览器窗口划分成不同的小窗口，每个小窗口都显示不同的HTML网页。
+框架就像一个窗户一样。一个窗户由：窗格和玻璃构成。
+一个框架由：框架集(<frameset>)和框架页(<frame>)构成。
+
+实例：一个上下型的框架
+<frameset  rows=“180,*,180”>
+    <frame src=“topFrame.html” />
+    <frame src=“mainFrame.html” />
+    <frame src=“rightFrame.html” />
+</frameset>
+
+注意事项：<frameset>和<body>只能二选一。
+
+<frameset>的常用属性
+    Cols：划分列的框架，如：cols=“180,10,*”左180px，中间10px，右边为自动
+                            Cols=“20%,10%,*”可以使用百分比表示
+    Rows：划分行的框架，如：rows=“180,*”
+    Frameborder：是否显示框架边线，取值：yes或no
+    Border：设置框线的粗细，border=“20”
+    Bordercolor：设置框线的颜色
+
+<frame>的常用属性
+    Src：引入一个HTML文件进来，在指定的一个小窗口中显示；
+    Scrolling：设置滚动条如何显示，取值：auto、yes、no
+    Noresize：不能调整框架的尺寸；
+    Name：设置当前窗口(框架)的名称；
+
+    注意：框架中需要注意的是：一是左框架的链接内容，如何在主框架显示？
+        如果返回框架首页，取决于<a>标记的 target属性的设置！
+
+
+
+浮动框架(行内框架、内嵌框架)
+浮动框架，就是在一个网页中开一个“小窗口”，在小窗口中来显示一个网页的内容。
+<iframe>是<body>的子标记。
+<iframe>如果浏览器不支持时，显示的提示信息</iframe>
+
+<iframe>的常用属性
+    Src：引入哪一个网页文件进来；
+    Width：指浮动框架的宽度
+    Height：指浮动框架的高度
+    Frameborder：是否显示框架边框，取值：yes、no、1、0
+    Scrolling：网页内容该如何显示，取值：auto、yes、no
+    Align：实现框架和文本混排
+    Hspace：左右间距
+Vspace：上下间距
+
+
+
+
+
+ -->

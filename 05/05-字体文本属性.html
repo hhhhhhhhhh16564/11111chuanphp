@@ -1,0 +1,129 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+    .news {
+        width: 800px;
+        border: 1px solid #FF4ADE;
+        padding: 5px 10px;
+        margin: 50px auto;
+    }
+    
+    h1 {
+        color: red;
+        text-decoration: underline;
+        text-align: center;
+    }
+    
+    p {
+        color: #70FF38
+    }
+    
+    .p1 {
+        font-size: 14px;
+        font-family: 楷体； line-height: 150%;
+        text-indent: 24px;
+        color: #FF2FF9;
+    }
+    
+    .p2 {
+        font-size: 16px;
+        line-height: 150%;
+        text-indent: 24px;
+        color: #FFA6D6;
+    }
+    
+    .p2 .span1 {
+        font-size: 20px;
+        color: yellow;
+        font-family: 黑体;
+        font-style: italic;
+        text-indent: 48px;
+    }
+    
+    .p3 {
+        font-size: 18px;
+        font-weight: bold;
+        background-color: #E7FFEF;
+        letter-spacing: 10px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="news">
+        <h1>张春贤：新疆改革任务极其艰巨 需更大的政治勇气</h1>
+        <p class="p1"> 人民网乌鲁木齐11月17日电 （记者 韩立群）16日，新疆维吾尔自治区党委八届六次全委（扩大）会议在乌鲁木齐召开。会议的主要任务是，认真学习贯彻党的十八届三中全会精神，研究新疆全面深化改革重大问题，动员全疆各族干部群众，坚定信心、凝聚共识，解放思想、变化变革，为实现新疆跨越式发展和长治久安而努力。</p>
+        <p class="p2"> <span class="span1">新</span>疆全面深化改革的目标任务是</span>，坚持走具有中国特色、符合新疆实际的发展路子，按照市场主导、充满活力、民主法治、公平正义、开放包容、团结和谐的要求，努力在重要领域和关键环节改革上取得决定性成果，到2020年基本形成比较完善的跨越式发展和长治久安体制机制。才能开创新疆工作新局面。当前，新疆经济社会发展已经站在新的历史起点上。通过三年多的实践，我们对改革充满信心。同时也要看到，市场化改革没有例外和特殊，地处边疆、区情复杂决不是不改革、缓改革的理由，只能成为全面深化改革的动力。我们一定要按照习近平总书记的要求，切实增强进取意识、机遇意识、责任意识，坚定信心、砥砺勇气，以全面深化改革的新成效，推动新疆跨越式发展和长治久安取得新胜利。</p>
+        <p class="p3">张春贤强调，民族团结是新疆各族人民的生命线，社会稳定是新疆一切工作的基本前提。只有保持团结稳定，才能为全面深化改革创造条件；只有全面深化改革，才能更好地维护团结稳定大局。要加强社会主义民主政治建设。加快推进社会主义民主政治制度化、规范化、程序化；加快推进法治新疆建设；强化权力运行制约和监督体系。要进一步巩固和加强民族团结。高举各民族大团结旗帜，全面贯彻落实党的民族政策，不断推进各民族共同团结奋斗、共同繁荣发展；全面贯彻党的宗教工作基本方针，依法管理宗教事务，积极做好引导宗教与社会主义社会相适应工作。</p>
+    </div>
+</body>
+
+</html>
+
+<!-- 
+
+伪类选择器：一般是给超级链接<a>增加CSS样式
+一个链接有四种状态：正常状态(:link)、放上状态(:hover)、激活状态(:active)、访问过的状态(:visited)
+（1）全局链接样式的设置
+a:link,a:visited{color:#0000FF;text-decoration:none;}
+a:hover{color:#990000;text-decoration:underline;}
+（2）局部链接样式的设置：给一类链接加样式
+<a class="a1" href="#">福州：女子闹市候车时被划伤脸 凶手很快消失(图)</a>
+a.a1:link,a.a1:visited{color:#009900;font-weight:bold;font-size:18px;}
+a.a1:hover{ color:#FF00FF;border:1px solid #996600;}
+
+
+
+CSS尺寸属性
+Width：指定元素的宽度，单位是 px或%
+Height：指定元素的高度，单位是px或%
+注意：任何HTML元素，都可以看成一个“盒子”，都具有width、height、padding(内边距)、margin(外边距)、border、backgroun(背景)。  比如：<b><i><font><span><div><table>等
+
+CSS字体属性
+font-family：设置字体
+font-weight：粗细，取值：bold，相当于<b>
+font-style：斜体，取值：italic，相当于<i>
+font-size：文字大小
+font：简写的形式，各个属性值间用空格隔开
+    body{ font-size:24px; font-family:黑体; font-weight:bold; font-style:italic; }
+    body{ font:bold italic 24px 黑体; }
+
+CSS文本属性
+Color：文本颜色，取值：英文单词、10进制、16进制；
+text-align：文本的水平对齐，取值：left  center  right
+text-decoration：文本修饰线，取值：none、underline、overline、line-through
+text-indent：首行缩进，text-indent:36px;
+letter-spacing：字间距
+line-height：行高，line-height:150%;   line-height:24px;
+
+CSS列表属性
+list-style-type：列表的类型，取值：none、disc、circle、square
+list-style-image：列表的图片，list-style-image:url(images/li01.gif);
+list-style-position：符号的位置，取值：outside(外)、inside(内)
+list-style：简写形式
+    .li01{ list-style-type:none;list-style-image:url(images/li01.gif);list-style-position:outside; }
+    .li01{ list-style:url(images/li01.gif) disc outside;}
+实现：单行文本在一个“容器”中垂直居中，使用的原理是，height和line-height值一样，就可以实现。
+
+CSS背景属性
+Background-color：背景颜色
+Background-image：背景图片，格式：background-image:url(images/bg.gif)
+Background-repeat：背景平铺，取值：no-repeat(不平铺)、repeat(平铺)、repeat-x(水平方向)、repeat-y(垂直方向)
+Background-position：水平方向 垂直方向，
+    Background-position：left|center|right  top|center|bottom;   //水平垂直都居中
+    Background-position：50%  50%;
+    Background-position：100px  200px;  //背景图距离左边100px，距离顶边200px
+Background-attachment：当移动滚动条时，背景是固定(fixed)还跟着滚动(scroll)
+Background：简写形式
+    .box{ background-image:url(images/bg.gif); background-repeat:no-repeat;background-position:center center;}
+    .box{background:url(images/bg.gif) no-repeat center center;}
+
+
+ -->
+
+
+

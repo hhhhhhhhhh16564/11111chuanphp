@@ -1,0 +1,45 @@
+/*************************************全局样式*******************************************/
+body,ul,li,a,p,div,span{margin:0px;padding:0px;}
+body{
+	background:url(../images/bg-body.gif) repeat-x #f1f1f1;
+	font-size:12px;
+}
+ul,li{list-style:none;}
+/*全局链接*/
+a:link,a:visited{color:#444;text-decoration:none;}
+a:hover{color:#ff0000;}
+
+
+/*box层的样式*/
+.box{width:973px;margin:0px auto;height:500px;}
+/*top层样式*/
+.top{ height:27px; line-height:27px; color:#0174c7;}
+.top ul{float:right;}
+.top ul li{float:left;}
+.top li a{padding:0px 8px;border-right:1px dotted #444;}
+.top li a.blue{color:#0000ff;}
+.top li a.red{color:#990000;}
+
+/*logo层样式*/
+.header .logo{height:122px;}
+/*导航栏*/
+.header .nav{height:47px;line-height:47px;}
+.header .nav li{float:left;padding:0px 3px;}
+.header .nav a{
+	width:73px;
+	height:47px;
+	display:block;
+	text-align:center;
+	color:#fff;
+	text-decoration:none;
+	font-weight:bold;
+}
+.header .nav a:hover{background:url(../images/menu2.gif) no-repeat;}
+.header .nav a.current{background:url(../images/menu2.gif) no-repeat;}
+.header .nav a.a1{width:85px;}
+.header .nav a.a1:hover{background:url(../images/menu1.gif) no-repeat;}
+
+/*全局类样式*/
+#noLine{border:none;}
+
+

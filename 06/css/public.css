@@ -1,0 +1,121 @@
+body,
+div,
+li,
+a,
+p,
+span,
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+body {
+    background: url(../images/bg-body.gif) repeat-x #f1f1f1;
+    font-size: 12px;
+}
+
+a:link,
+a:visited {
+    color: #444;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ff0000
+}
+
+.box {
+    width: 973px;
+    margin: 0px auto;
+    height: 500px;
+}
+
+.top {
+    height: 27px;
+    line-height: 27px;
+    color: #0174c7
+}
+
+.top ul {
+    float: right;
+}
+
+.top ul li {
+    float: left;
+}
+
+.top li a {
+    padding: 0px 8px;
+    border-right: 1px dotted #444
+}
+
+.box .logo {
+    height: 122px;
+}
+
+.header .nav {
+    height: 47px;
+    line-height: 47px
+
+
+}
+
+.nav ul li {
+    float: left;
+    height: 47px;
+    padding: 0px 3px;
+}
+
+.header .nav a {
+    width: 73px;
+    height: 47px;
+    display: block;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+
+}
+
+.header .nav a:hover {
+
+    background: url(../images/menu2.gif) no-repeat ;
+
+}
+
+.header .nav a.current{background: url(../images/menu2.gif) no-repeat;}
+
+.header .nav a.a1{width:85px;}
+.header .nav a.a1:hover{background:url(../images/menu1.gif) no-repeat;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*.header .nav a*/

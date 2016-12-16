@@ -1,0 +1,32 @@
+/************************全局样式设置*******************************/
+body,ul,li,a,p,div,span,img,h4,h2{margin:0px;padding:0px;}
+body{font-size:12px;color:#444;background:url(../images/bg-body.gif) repeat-x #f1f1f1;text-align:center;}
+ul,li,ol{list-style:none;}
+img{border:none;}
+a:link,a:visited{color:#444;text-decoration:none;}a:hover{color:#ff0000;}
+
+.box{width:973px;margin:0px auto;text-align:left;}
+.header .top{height:27px;line-height:27px;color:#0174c3;}
+.header .top span{float:left;}
+.header .top ul{float:right;}
+.header .top ul li{float:left;}
+.header .top ul li a{padding:0px 8px;border-right:1px dotted #444;}
+.header .top ul li a.blue{color:#0000ff;}
+.header .top ul li a.red{color:#990000;}
+.header .top ul li a.noLine{border:none;}
+
+.header .logo{height:122px;background:url(../images/bg-logo.jpg) no-repeat right bottom;}
+.header .logo .divL{width:202px;height:99px;padding-top:23px;float:left;}
+.header .logo .divC{width:390px;height:87px;padding-top:35px;float:right;}
+.header .logo .divC h2{font-size:24px;font-family:黑体;color:#0174c3;padding:5px 0px;}
+.header .logo .divC li{width:68px;height:20px;line-height:20px;background:url(../images/li01.png) no-repeat;float:left;color:#fff;padding-left:10px;margin-right:15px;}
+.header .logo .divR{width:358px;height:106px;padding-top:16px;float:right;}
+
+.header .menu{height:47px;line-height:47px;}
+.header .menu li{float:left;padding:0px 3px;}
+.header .menu li a{width:73px;height:47px;display:block;text-align:center;font-weight:bold;color:#fff;}
+.header .menu li a:hover{background:url(../images/menu2.gif) no-repeat;}
+.header .menu li a.current{background:url(../images/menu2.gif) no-repeat;}
+.header .menu li a.a2{width:85px;}
+.header .menu li a.a2:hover{background:url(../images/menu1.gif) no-repeat;}
+

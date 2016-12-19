@@ -1,0 +1,1 @@
+document.write("<p>这里是一个段落</p>");

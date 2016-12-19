@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <script type="text/javascript">
+        var a = "广州传智博客 \"php\" 基础班课程体系";
+        var b;
+        var str = window.prompt("请输入你的名称")
+        document.write(typeof(str)+ ":<br/>" + str);
+
+
+    </script>
+
+
+</head>
+<body>
+    
+</body>
+</html>
+
+<!-- 变量的数据类型
+一个变量的类型，由变量的值来决定。
+基本数据类型：字符型(String)、数值型(Number)、布尔型(Boolean)、Undefined(未定义型)、Null(空型)
+复合数据类型：数组(Array)、对象(Object)、函数(Function)
+基本数据类型和复合数据类型的主要区别：基本数据类型的值只有一个，而复合数据类型的值可以多个
+
+1、数值型数据(Number)
+    数值型数据包含整型和浮点型(小数)。
+    Var a = 100;
+    Var a = 0;
+    Var a = -100;
+    Var a = 0.987;
+    Var a = NaN;
+
+    数值型数据有一个特殊的值NaN，它的含义是not a number。用在：将其它类型的数据转成数值型时，转不过来时，将返回NaN。
+    举例：将a = “abc”;  转成数值时，转不过去，就会返回NaN值 
+    
+2、字符型数据(String)
+    用单引号或双引号，引起来的一个字符串。
+    Var a = ‘abc’;
+    Var a = “中国”;    //JS中每行语句写完后，以“;”号结束，分号不是必须的，但建议大家写
+    Var a = “1200”;   //也是字符串
+    
+    如果在双引号内再套双引号时，内层的双引号，应该使用转义字符 \” 来代表双引号。
+    如果在单引号内再套单引号时，内层的单引号，应该使用转义字符 \’ 来代表单引号。
+    转义字符的作用：当浏览器遇到“\”符号时，会将其后的字符进行特殊处理。
+var a = "广州传智播客\"PHP\"基础班课程体系";
+document.write(a);
+3、布尔型(Boolean)
+    布尔型数据只有两个结果，真或假，是或否；
+    布尔型数据只有两个值：true或false
+    
+    Var isMarried = true;  //婚否只有两个可能：已婚、未婚
+    Var sex = true;       //性别只有两个结果：男、女
+    Var isRead = false;    //邮箱读取状态：已读、未读
+
+4、undefined(未定义型)
+    当一个变量定义了，但没有赋值，会返回undefined，它的值只有一个“undefined”
+<script type="text/javascript">
+var a = "广州传智播客\"PHP\"基础班课程体系";
+var b;
+var isRead = true;
+document.write(typeof(isRead));
+</script>
+
+5、null(空型)
+    当一个对象不存在时，将返回null，null的数据类型的值只有一个null。
+    window.prompt()弹出一个输入对话框
+var str = window.prompt("请输入你的名称");
+document.write(typeof(str)+"，"+str);
+
+判断一个变量的函数：typeof()
+语法格式：string typeof(var)
+说明：
+    string代表的是它的值是什么类型的；
+    var代表测试的变量名称；
+返回值有六个：“string”、“number”、“boolean”、“undefined”、“object”、“function”
+    有哪些数据返回的是“object”：array、object、null
+举例：
+    var a = “abc”;
+    document.write( typeof(a) );  //返回”string”
+ -->

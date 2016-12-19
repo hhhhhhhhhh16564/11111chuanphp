@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript">
+//第一种：其它类型自动转成数值
+/*
+var a = "abc";              //NaN
+var a = true;             //1
+var a = false;            //0
+var a = "100px";          //NaN
+var a = "100";             //100
+var a = undefined;        // NaN
+var a = null;           // 0
+//强制转换的函数Number()
+a = Number(a);
+var result = "类型是："+typeof(a)+"，值是："+a;
+document.write(result);
+*/
+//第二种：其它类型自动转成布尔型
+/*
+var a = "abc";              //true
+var a = 0;                  //false
+var a = -100;            //true
+var a = "";               //false
+var a = "100";          //true
+var a = undefined;      // false
+var a = null;           //false 
+//强制转换的函数Boolean()
+a = Boolean(a);
+var result = "类型是："+typeof(a)+"，值是："+a;
+document.write(result);
+*/
+//第三种：其它类型自动转成字符型
+var a = 0;               //  "0"
+var a = true;            //  "true"
+var a = false;           //  "false"
+var a = NaN;           //  "NaN"
+var a = 100;          //  "100"
+var a = undefined;     //  "undefined" 
+var a = null;         //"null"
+//强制转换的函数String()
+a = String(a);
+var result = "类型是："+typeof(a)+"，值是："+a;
+document.write(result);
+
+
+</script>
+</head>
+
+<body>
+</body>
+</html>

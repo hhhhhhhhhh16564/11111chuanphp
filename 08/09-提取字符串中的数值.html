@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript">
+var a = "2.2e10";
+var a = "11";
+document.write(parseInt(a,2));
+</script>
+</head>
+
+<body>
+</body>
+</html>
+<!-- 二、强制数据类型转换
+Number()强制将其它类型转成数值型；
+Boolean()强制将其它类型转成布尔型；
+String()强制将其它类型转成字符型；
+
+三、从字符串中提取数值
+parseInt(str)：在字符串中，从左到右提取整数，如遇到非数字数据，则停止提取；
+    例如：将一个<div>的宽度增加200px
+        var width = “100px;”
+        width = parseInt(width);  //结果为100
+        width += 200;  // 300
+        width = width + “px”;   //结果为 “300px”
+parseFloat(str)：在字符串中，从左到右提取浮点数(小数)，如遇到非数字数据，则停止提取；
+    parseFloat(“.3px”);       //  0.3
+    paseFloat(“abc200”);      //  NaN
+    parseFloat(“123.09px”);   //  123.09
+注意：如果要提取的字符串的第一个字符是非数字的，则直接返回NaN。
+
+
+算术运算符、赋值运算符、字符串运算符
+3、字符串运算符：+和+=
+    “+”就是用来连接前后两个字符串，或者连接变量；
+    “+”如果它的前后有一个是字符串，则“+”的功能就是“连接”字符串功能；
+    “+”如果它的前后都是数值时，则“+”的功能就是“加法”运算的功能；
+        Var a = 100;
+        Var b = “100”;
+        Var c = a + b;  //结果是：“100100”
+
+        Var d = 200;
+        Var result = a + d;   //结果为：300
+
+    “+=”如果它的前后有一个是字符串，则“+＝”的功能就是“连接”功能；
+    “+＝”如果它的前后都是数值，则“+＝”的功能就是“加法”运算功能；
+    （1）加法运算
+            var a = 10;
+            a += 100;   //展开后是： a = a + 100
+            document.write(a);   //结果是：110
+    （2）字符串连接功能
+            Var a = 100;
+            a += “中国广州”;   //展开后：a = a + “中国广州”
+            document.write( a );  //结果是：“ 100 中国广州”
+
+4、三元运算符
+语法格式：条件表达式 ?  结果1 : 结果2
+说明：当条件表达式为true时，执行“结果1”的代码；如果条件表达式为false时，执行“结果2”代码。
+举例：
+    Var isMarried = false;
+    isMarried ? “已婚” : “未婚”;  //如果isMarried的值为true，则输出“已婚”，否则，输出“未婚”
+
+ -->

@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>无标题文档</title>
+    <script type="text/javascript">
+
+    //括号中的字符串必须加双引号
+    document.write('是打飞机')
+
+    window.alert("昨天睡得太晚了，监听没啥地方");
+
+    document.write("<font size=7 color=red> 电视剧方老师的风景 </font>范德萨发生")
+
+
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
+
+<!-- 
+昨日回顾
+CSS浮动和清除
+浮动元素向左或向右浮动(飘动)，浮动包围元素(父元素)的边上或者上一个浮动元素的边上；
+浮动元素应该是一个“块元素”，行内元素加了“浮动”特性后，将变成“块元素”；
+    行内元素，经过什么操作，可以变成“块元素”？
+        浮动、display:block、固定定位、绝对定位
+浮动元素不占空间，层级应高于普通元素；
+
+CSS定位：让元素相对于某个元素来进行相应的偏离。层级应该高于普通元素。
+Position：定位属性，取值：static(默认、普通文档流、没有定位)、fixed(固定定位)、relative(相对)、absolute(绝对)
+定位属性要配合四个定位坐标(left  right   top  bottom)值，来实现元素的定位；
+固定定位(fixed)：相对于浏览器窗口，来进行的定位。不占空间。将生成一个“块元素”，不管原来是什么元素。
+相对定位(relative)：相对于“它原来自己”进行定位。占空间。
+绝对定位(absolute)：相对于祖先定位元素(相对定位、绝对定位)，进行定位。不占空间。生成“块元素”。
+
+CSS HACK：针对不同浏览器(FF、IE7、IE6)，书写CSS代码的过程。
+div{    
+background-color：#FF0000;   //所有浏览器都支持
+    *background-color：#00FF00;   //IE6和IE7
+    _background-color：#0000FF;   //IE6
+}
+注意：一般来说，使用公共的CSS属性写法，可能满足我们的大部分兼容性，偶尔会有几个特殊的CSS属性存在不兼容性，就可以使用CSS HACK试一下。
+
+
+JavaScript是什么
+Javascript是一种小型的、轻量级的、面向对象的、跨平台的客户端的脚本语言。
+Javascript是和浏览器捆绑在一起的，只要安装了浏览器软件，就已经有了JavaScript。
+浏览器是一种解释器，可以直接解释或翻译HTML、CSS、JavaScript。
+JavaScript是客户端脚本程序，运行在客户端；
+JavaScript是跨平台（Windows平台、Unix、Linux、 MAC）
+JavaScript是面向对象：一个对象由属性和方法构成。属性是指静态的特性。方法是指对象能干什么？电脑能听音乐、打游戏等动作(方法)。
+
+
+
+
+
+常用的两个客户端输出方法
+第一个：document.write( str)，
+描述：在网页中输出一个字符串(文本)，相当于在<body></body>标记中，来写入一段普通文本一样。
+参数说明：
+document是文档的意思，代表当前文档(网页)，它是一个document对象，document对象有很多的属性和方法。
+write( )就是document对象的一个方法。
+str就是要在<body>中输出的内容，这个内容一般要用双引号或单引号引起来，不能直接写文本；
+提示：对象的属性和方法的区别，加括号就是方法，不加括号的就是属性。
+举例：document.write(“这里是要输出的内容”)
+      Document.write(“<font size=7 color=red>这里是要输出的内容</font>”);
+
+第二个：window.alert( str )
+window代表浏览器窗口对象，window对象也有很多的属性和方法。
+alert( )是Window对象的一个方法，alert()主要作用是“弹出一个警告对话框”
+str就是警告对话框中的提示文本信息；
+提示：对象和属性或方法间，用“.”符号来连接。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ -->

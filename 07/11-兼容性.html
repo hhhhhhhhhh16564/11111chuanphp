@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+body{margin:0px;padding:0px;}
+.div1{
+    width:200px;
+    height:200px;
+    background-color:#FF0000;
+    margin:50px;
+    _margin:50px 50px 50px 25px;  /*IE6能识别*/
+    float:left;
+}
+.div2{width:200px;height:200px;background-color:#0000FF;margin:50px;float:left;}
+</style>
+</head>
+
+<body>
+<div class="div1"></div>
+<div class="div2"></div>
+</body>
+</html>
+<!-- 
+
+（1）清除所有的标记的内外边距
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,p,blockquote,th,td{margin:0;padding:0}
+（2）项目符号
+ul,ol,li{list-style:none;}
+（3）全局字体颜色设置
+body{font-size:12px;color:#444;}
+（4）常用标题的设置
+h1,h2,h3,h4,h5,h6{font-size:100%}
+h1{padding:11px 0 0; margin-bottom:4px;font:normal 20px/30px 黑体;text-align:center;}
+h2 { padding:6px 0 0; margin-bottom:4px; font:normal 20px/30px 黑体; text-align:center; }
+h3{font-size:12px}
+h4{font-size:12px;font-weight:normal}
+
+（5）全局链接
+a{text-decoration:none;cursor:pointer}
+a:link, a:visited {color:#004276}
+a:hover{text-decoration:underline;color:#ba2636}
+（6）图片
+img{border:none;}
+
+（7）浮动和清除
+.float1{float:left;}
+.float2{float:right}
+.clear{clear:both;}
+.blank10{height:10px;clear:both;}
+
+（8）颜色
+.red{color:#FF0000;}
+.blue{color:#0000FF;}
+.green{color:#00ff00;}
+
+第二种：常用的兼容性设置
+IETEST软件：可以测试IE6、IE7
+（1）网页居中
+    IE5下的居中，应该是：text-align:center
+    Firefox下的居中，应该是：margin:0px auto;
+
+body{font-size:12px;color:#444;background:url(../images/bg-body.gif) repeat-x #f1f1f1;text-align:center;}
+.box{width:973px;margin:0px auto;text-align:left;}
+（2）单行内容垂直中齐
+    Div{height:80px;line-height:80px;}
+（3）IE中元素浮动时，margin左右加倍的问题
+    解决办法：Display:inline;  
+    
+（4）实现1px高度的<div>
+在IE6下解决办法：overflow:hidden;  //超出1px外的部分全部隐藏掉
+
+
+第三种：CSS HACK简介
+CSS HACK，针对不同浏览器，编辑不同的CSS代码的过程，就叫CSS HACK。
+（1）CSS属性的HACK：
+    div{
+        background-color：#FF0000;  //所有浏览器都支持
+        *background-color：#00FF00;   //ie6和IE7支持
+        _background-color：#0000FF;   //IE6认识
+}
+（2）CSS选择器的HACK(了解一下)
+    IE7浏览器能识别
+*+html div{
+        Background-color:#FF0000;
+}
+    *html div{
+        Background-color:#FF0000;
+}
+
+
+注意：CSS HACK虽然可能解决一些浏览器兼容的问题，但必竟不是W3C的规范，因此尽量少用，如果实在调试不过去，偶尔用一下可以。
+
+ -->

@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript">
+//根据一个学生的分数（0-100之间），给其下相应的评语：大于90为优秀，大于等于80为良好，大于等于70为中等，大于等于60为及格，小于60为不及格。
+//提示（1）判断输入的数据为空或非数值（2）根据不同的分数输出不同的评语。
+/*
+    分析结果：
+    1.获取用户输入的分数，弹出输入对话框window.prompt()
+    2.如何获取用户输入的值呢？var score = window.prompt()
+    3.判断用户是否“取消”操作
+    4.判断用户的输入是否为空
+    5.判断用户输入的是否是数值
+    6.根据用户的不同分数，输出相应的评语
+*/
+//（1）获取用户输入的信息
+var score = window.prompt("请输入一个分数");
+//（2）判断用户是不是点击“取消”按钮
+
+//不知道怎么取消操作
+if( score == null)// 版本迭代的原因，这句不会执行
+{
+    result = "你取消操作了！";
+}else if( score == "" )
+{
+    result = "你什么也没有输入！";
+}else if( parseFloat(score) != score )
+{
+    result = "你输入的不是一个分数!";
+}else if(score>100 || score<0)
+{
+    result = "超出范围";
+}else
+{
+    //如果以上条件都不满足，则说明用户输入是一个数值
+    if( score >=90 && score<=100)
+    {
+        result = "优秀";
+    }else if(score>=80)
+    {
+        result = "良好";
+    }else if(score>=70)
+    {
+        result = "中等";
+    }else if(score>=60)
+    {
+        result = "及格";
+    }else
+    {
+        result = "不及格";
+    }
+}
+
+
+//输出结果
+document.write(result);
+</script>
+</head>
+
+<body>
+</body>
+</html>

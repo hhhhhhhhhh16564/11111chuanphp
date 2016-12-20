@@ -1,0 +1,188 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <script type="text/javascript">
+    //实例：在网页中输出1－100间所有的偶数
+    /*
+    for(var i=1;i<=100;i++)
+    {
+        //如果是偶数，才输出，用IF进行条件判断
+        if(i%2==0)
+        {
+            document.write(i+" ");
+        }
+    }
+    */
+    //（1）i++ 运算符的应用
+    var a = 10;
+    var b = a++; //  先将a的值赋给变量b，a自身再加1，b=10  ， a=11
+    //（2）++i 运算符的应用
+    var a = 10;
+    var b = ++a; //先将a的值加1，再将结果赋给变量b，b=11 , a=11
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
+<!-- 昨日回顾
+变量定义：使用关键字var来定义变量。例如：var 变量名称 = 变量的值
+变量的命名：
+可以是a-z、A-Z、0-9、_字符；
+不能以数字开头，可以字母或下划线开头；
+不能用系统关键字作为变量的名称；比如：typeof  、var  、switch、for等
+变量的类型：（1）基本数据类型：数值型、字符型、布尔型、undefined、null
+        （2）复合数据类型：数组、对象、函数
+数值型数据类型：包含整型和浮点型，还有一个NaN。
+字符型数据类型：常用的转义字符：\”、\’等
+布尔型数据类型：有两个值true和false；
+未定义型数据类型：变量定义了，但没有赋值，会返回undefined，这个类型只有一个值undefined
+空对象型：当进行其它操作时，返回的对象为空时，将返回一个null的类型数据，只有一个值null
+变量是存在内存中，但变量是有生存周期，变量的消失时机：网页执行完毕后。
+
+JS数据类型转换
+数据类型都是自动转换，并不需要强制转换函数；
+强制转换函数，只起一个测试或检验的作用；
+
+
+
+JS中的运算符
+一、算术运算符：+、-、*、/、%(取余)、++(自身加1)、--(自身减1)
+%：两个数相除，取余数；如果余数为0，则两个数能整除。我们一般可以%来判断偶数或奇数；
+//实例：在网页中输出1－100间所有的偶数
+for(var i=1;i<=100;i++)
+{
+    //如果是偶数，才输出，用IF进行条件判断
+    if(i%2==0)
+    {
+        document.write(i+" ");
+    }
+}
+++：自身加1运算符，有两种表现形式：作前缀(++i)、作后缀(i++)
+    var a = i++，含义：先将i的值赋给前面的变量，然后将i的值加1；
+    var a = ++i，含义：先将i的值加1，然后将结果赋给前面的变量；
+//（1）i++ 运算符的应用
+var a = 10;
+var b = a++;   //  先将a的值赋给变量b，a自身再加1，b=10  ， a=11
+//（2）++i 运算符的应用
+var a = 10;
+var b = ++a;   //先将a的值加1，再将结果赋给变量b，b=11 , a=11
+
+二、赋值运算符：=、+=、-=、*=、/=、%=
+    主要思想：将赋值号右边的运算结果，赋给左边的变量
+var a = 10;  
+a += 10;   // 展开后：a = a + 10
+    a -= 10;    //展开后：a = a - 10
+    a *= 2;    //展开后：a = a * 2
+    ……
+三、字符串运算符：+、 +＝
+    主要思想：用来连接两个字符串，或变量与字符串的连接。
+    +号的左右，只要有一个是字符串，就执行“连接”运算；
+    +号的左右，两个操作数都是数值，则执行“加法”运算；
+    Var a = 10;
+    Var b = a + “px”;   //  b = “10px”
+    b += “的宽度！”;  //  b = “10px的宽度！”   展开：b = b + “的宽度！”
+综合案例：表格隔行变色
+var str = "<table width='500' border='1' style='border-collapse:collapse;'>";
+str += "<tr><th>编号</th><th>新闻标题</th><th>发布时间</th></tr>";
+for(var i=1;i<100;i++)
+{
+    str += "<tr"; 
+    //如果是偶数行，则输出bgcolor属性
+    if(i%2==0)
+    {
+        str += " bgcolor='#cccccc'";
+    }
+    str += ">";
+    str += "<td>"+i+"</td><td>&nbsp;</td><td>&nbsp;</td>";
+    str += "</tr>";
+}
+str += "</table>";
+
+四、三元运算符，?:
+    语法格式：条件表达式(条件判断)  ? 结果1 : 结果2
+    说明：
+        条件表达式，就是判断，判断结果只有true和false
+        若判断结果为true，则执行“结果1”的代码；
+        若判断结果为false，则执行“结果2”的代码；
+    举例1：根据变量isMarried的值，来输出“已婚”或“未婚”
+        Var isMarried = true;
+        Var result = isMarried ? “已婚” : “未婚”;  //如果isMarried为true，就将“已婚”赋给变量result
+        document.write(result);  //输出结果
+    举例2：求a=100，b=200的最大值？
+        var a = 100;
+        var b = 200;
+        var max = a>b ? a : b;  //如果a>b=true，则将a的值赋给max；如果a>b=false，则将b的值赋给max
+        document.write(“最大值是：”+max);   //结果果：最大值是200
+    举例3：判断毕业院校
+        var school;   //定义变量了，但未赋值，它的数据类型是undefined，转成布尔值false  
+        var result = school ? school : “未填写”;  //如果school转成布尔true，则将school的值赋给result
+                                        //如果school转成布尔false，则将“未填写”赋给result
+        document.write(result);
+五、比较运算符：>、<、>=、<=、==、!=、===、!==
+    比较运算符，是对两个操作数进行比较，比较的结果只有两种可能，分别为true和false
+    “==”是等于，只要两个操作数值相等，就返回true，否则返回false
+    “===”是全等，两个数的值和类型都相等，就返回true，否则返回false
+    举例1：求两个数中的最大一个
+        var a = 10;  var b = 20;
+        var max = a>b ? a : b;
+    举例2：判断a=100，b=“100”这两个变量是值相等，还是类型也一样
+        var a = 100;
+        var b = “100”;
+        if( a == b)
+{
+            //如果a和b的值相等，则执行以下代码
+            document.write(“a和b的值相等”);
+            //进一步判断：判断类型是否一样
+            if( a === b){
+                document.write(“a和b的类型一样！”);
+}else
+{
+    document.write(“a和b的类型不一样！”);
+}
+}else
+{
+    //如果a和b的值不相等，则执行以下代码
+    document.write(“a和b不相等”);
+}
+
+六、逻辑运算符：&&、||、!
+    逻辑运算符，是同时对多个条件表达式进行运算；
+    &&逻辑与(并且关系)，当两个条件同时成立时(true)，则结果为true，否则，结果为false
+    ||逻辑或(或者关系)，只要有一个条件为true，则结果为true；否则，结果为false
+    !逻辑非(取反)，!true = false，!false = true
+
+    举例1：判断一个变量的取值是不是在90-100间
+        var a = 900;
+        if(  a>90  &&  a<100 )
+{
+    //结果为true时，执行的代码
+    document.write(“变量符合要求”);
+}else
+{
+    //结果为false时，执行的代码
+    document.write(“变量不符要求”);
+}
+    举例2：判断一个变量是否在 大于90,或者小于10。
+        var a = 9;
+        if( a>90 || a<10 )
+{
+    document.write(“变量符合要求”);
+}else
+{
+    document.write(“变量不符合要求”);
+}
+
+
+特殊运算符(了解)
+    new运算符：创建一个对象或一个对象的实例时使用；
+        举例：创建一个系统时间的实例，var today = new Date();//作个了解
+    typeof运算符：判断一个变量的数据类型，”string””number””boolean””undefined””object””function”
+    delete运算符：删除一个对象的属性或者数组的元素
+    void运算符：作用于任何值都将返回undefined，常用屏蔽超链接的返回值
+        举例：<a href="javascript:void(0)">凤凰网</a>
+ -->

@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <script type="text/javascript">
+    //实例： 隔行变色
+    //分析：
+    //通过for循环来输出多个表格行;
+    //偶数行的背景变色
+
+    var str = '<table border="1" align="center" width="500" style="border-collapse: collapse;">';
+
+    str += '<tr><th>编号</th><th>新闻标题</th><th>发布时间</th></tr>';
+    for (var i = 0; i < 100; i++) {
+        str += "<tr"
+
+        if (i % 2 == 0) {
+            str +=" bgcolor='red'"
+        }
+
+
+        str += ">"
+
+        str += '<td>' + i + '</td> <td>&nbsp;</td> <td>&nbsp;</td>'
+
+
+        str += "</tr>"
+
+    }
+
+
+
+
+
+
+
+    str += '</table>';
+    document.write(str);
+    </script>
+</head>
+
+<body>
+
+
+
+</body>
+
+</html>

@@ -6,6 +6,20 @@
 <script type="text/javascript">
 var a = "2.2e10";
 var a = "11";
+
+/*
+
+第二个参数如果省略该参数或其值为 0，则数字将以 10 为基础来解析。如果它以 “0x” 或 “0X” 开头，将以 16 为基数。
+
+如果该参数小于 2 或者大于 36，则 parseInt() 将返回 NaN。
+parseInt("10");         //返回 10
+parseInt("19",10);      //返回 19 (10+9)
+parseInt("11",2);       //返回 3 (2+1)
+parseInt("17",8);       //返回 15 (8+7)
+parseInt("1f",16);      //返回 31 (16+15)
+parseInt("010");        //未定：返回 10 或 8
+
+*/
 document.write(parseInt(a,2));
 </script>
 </head>

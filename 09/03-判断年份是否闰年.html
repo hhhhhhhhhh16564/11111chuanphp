@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript">
+//实例：判断一个年份是否是闰年
+//判断闰年的条件：
+//（1）能被4整除，并且不能被100整除
+//（2）能被400整除
+
+//1、定义一个变量
+var year = 2012;
+//2、判断闰年
+if( year%4==0 && year%100!=0 || year%400==0  )
+{
+    //条件为true时，执行的代码
+    document.write(year+"年是一个闰年！");
+}else
+{
+    //条件为false时，执行的代码
+    document.write(year+"年不是一个闰年！");
+}
+
+
+
+</script>
+</head>
+
+<body>
+<a href="javascript:void(100)">凤凰网</a>
+<a href="javascript:void(0)">凤凰网</a>
+<a href="javascript:void(0)">凤凰网</a>
+<a href="javascript:void(0)">凤凰网</a>
+<a href="javascript:void(0)">风行网</a>
+
+</body>
+</html>
+<!-- if条件判断：常用于一个范围的判断
+语法结构一：
+    if( 条件表达式，结果是true或false )
+{
+        //条件为true时，执行的代码
+}
+    举例：
+        var a = “abc”;
+        //变量a自动转换成布尔型true
+        if( a )
+{
+    document.write(a);
+}
+语法结构二：
+    if( 条件表达式 )
+{
+    //条件为true时，执行的代码
+}else
+{
+    //条件为false时，执行的代码
+}
+    条件表达式的结果，只有两种可能true和false。
+语法结构三(多条件)：
+if(条件1)
+{
+    代码1;
+}else if(条件2)
+{
+    代码2;
+}else if(条件3)
+{
+    代码3 ；
+}else
+{
+    如果以上条件都不满足，则执行；
+}
+注意：多种if条件判断的结果只有一个，不可能同时执行多个结果；
+window.prompt()弹出一个输入对话框
+语法格式：prompt(text[,defaultText])
+参数说明：
+    Text：提示信息；
+    defaultText：是可选项，是输入框中默认显示的文本
+返回值：如果点“确定”返回string类型，如果点“取消”返回null类型
+举例：var score = window.prompt(“请输入一个分数”,”60”)
+ -->

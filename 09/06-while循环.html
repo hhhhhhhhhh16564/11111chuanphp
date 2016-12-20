@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript">
+//实例：求1-100间所有偶数的和
+/*分析结果：
+    （1）循环输出1－100间所有的数
+    （2）再输出所有的偶数
+    （3）将所有的偶数求和
+*/
+//（1）输出1－100间所有的数
+var i = 1; //变量初始化
+var sum = 0; //和的初始值
+while( i<=100 )
+{
+    //输出所有的偶数
+    if( i%2==0 )
+    {
+        sum += i; //展开后 sum = sum + i
+    }
+    i++;
+}
+document.write("和为："+sum);
+</script>
+</head>
+
+<body>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript">
+/*4.（循环）计算1-1000之间能被3整除的偶数的个数。
+分析结果：
+	（1）先输出1-1000间的所有数
+	（2）能被3整除，并且是偶数(i%2==0)
+	（3）统计偶数的个数
+*/
+//定义变量，变量初始化
+var i = 1;
+var n = 0; //代表个数
+while( i<100 )
+{
+	//判断能被3整除且能被2整除
+	if( i%3==0 && i%2==0 )
+	{
+		n++;  //展开后 n = n + 1
+	}
+	i++;//变量更新，避免死循环
+}
+document.write(n);
+</script>
+</head>
+
+<body>
+</body>
+</html>

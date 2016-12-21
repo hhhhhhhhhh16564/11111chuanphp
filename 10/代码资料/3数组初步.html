@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript">
+var arr = new Array();
+//增加数组元素，数组的值可以是任何的数据类型
+//字符串、数值、布尔、undefined、null、array、object、 function
+arr[0] = 10;
+arr[1] = 20;
+arr[2] = true;
+arr[3] = "abc";
+arr[9] = 990; 
+document.write(arr+"，长度为："+arr.length);  //将数组中各个元素用逗号连接成一个字符串
+//删除一个数组元素
+delete arr[arr.length-1];  //删除最后一个数组元素，最大下标=长度-1
+//删除元素后，再统计数组的长度
+document.write("<hr>"+arr+"，长度为："+arr.length);
+
+//创建二维数组
+var students = new Array();
+students[0] = 0;
+students[1] = [10,20,30,40];
+students[2][0] = "abc";
+students[2][1] = "guangzhou";
+document.write(students);
+
+</script>
+</head>
+
+<body>
+</body>
+</html>

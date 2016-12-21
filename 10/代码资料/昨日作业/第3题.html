@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript">
+/*
+（循环，分析）一张纸的厚度是0.01毫米，则该纸对折30次后是多厚（据说超过珠穆朗玛峰的高度）。反过来，一张纸对折几次后，就超过1米厚了？
+分析结果：
+第1次对折  0.01*2
+第2次对折  (0.01*2)*2
+第3次对折 ((0.01*2)*2)*2
+……
+第30次对折   上一对折后的厚度*2
+*/
+var houdu = (0.01/1000);   // 毫米除1000转成米
+var n = 1;  //代表对折的次数
+while(n<=30)
+{
+	houdu *= 2;  //  hourdu = houdu * 2
+	//如果houdu超过1米，输出n的值
+	//假设当前厚度为1米，对折一次，1米*2=2
+	if(houdu>1 && houdu<=2)
+	{
+		document.write("对折"+n+"次后，厚度超过1米<br>");
+	}
+	n++;
+}
+document.write("对折30次后的厚度为："+houdu);
+
+</script>
+</head>
+
+<body>
+</body>
+</html>

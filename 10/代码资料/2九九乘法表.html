@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript">
+//实例：九九乘法表
+/*
+	分析结果：
+	(1)先输出一个九行一列的表格
+	(2)输出九行九列的表格
+	(3)输出梯形的表格
+	(4)输出每个单元格中的内容
+*/
+// i代表行数，j代表列表
+var str = "<table border=1 width=500 align=center>";
+//输出9行的表格
+for(var i=1;i<=9;i++)
+{
+	str += "<tr>";
+	//循环9列
+	for(var j=1;j<=i;j++)
+	{
+		str += "<td>"+j+"&times;"+i+"="+j*i+"</td>";
+	}
+	str += "</tr>";
+}
+str += "</table>";
+document.write(str);
+</script>
+</head>
+
+<body>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript">
+//实例：用数组来定义一个人的基本信息
+//var arr = ["周更生","男",30,"大专",2000,500,false];
+var arr = new Array();
+arr[0] = "周更生";
+arr[1] = "男";
+arr[2] = 30;
+arr[3] = "大专";
+arr[4] = 2000;
+arr[5] = 500;
+arr[6] = false;
+//构建输出的字符串
+var str = "<h2>"+arr[0]+"的基本信息</h2>";
+str += "姓名："+arr[0];
+str += "<br>性别："+arr[1];
+str += "<br>年龄："+arr[2];
+str += "<br>学历："+arr[3];
+str += "<br>基本工资："+arr[4];
+str += "<br>奖金："+arr[5];
+str += "<br>实发工资："+(arr[4]+arr[5]);
+str += "<br>婚否："+ (arr[6] ? "已婚" : "未婚");
+//输出结果
+document.write(str);
+</script>
+</head>
+
+<body>
+</body>
+</html>

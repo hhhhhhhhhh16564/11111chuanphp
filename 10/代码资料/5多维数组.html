@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript">
+//实例：在表格中输出以下二维数组中的数据
+var student = [
+			["周更生","男",30,true,"大专",5000,500,,"山东省"],
+			["刘晓庆","女",26,false,"研究生",8000,1500,"北京科技大学","山西省"],
+			["习近平","男",38,true,"大专",1000,250,"清华大学","陕西省"],
+			["李克强","女",34,true,"高中",11000,30,"河北大学","江苏省"],
+		  ];
+
+//循环表格行或列
+var str = "<table border=1 align=center padding=5>";
+for(var i=0;i<student.length;i++)
+{
+	str += "<tr>";
+	for(var j=0;j<student[0].length;j++)
+	{
+		str += "<td>"+student[i][j]+"</td>";
+	}
+	str += "</tr>";
+}
+str += "</table>";
+document.write(str);
+</script>
+</head>
+
+<body>
+</body>
+</html>

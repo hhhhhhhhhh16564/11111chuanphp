@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript">
+var timer;  //全局变量
+var i=0;  //变量初始化，全局变量
+//定义函数：开始计时
+function start()
+{
+	//获取id=result的对象
+	var obj = document.getElementById("result");
+	var str = "该程序已经运行了"+i+"秒！";
+	i++; //展开 i=i+1
+	//将变量str的内容写入到id=result中去
+	obj.value = str;  //给表单元素加内容，一般用value属性
+					  //除表单外的其它标记用JS写内容，使用innerHTML
+	
+	//设置延时器
+	timer = window.setTimeout("start()",1000);
+}
+//定义函数：停止计时
+function stop()
+{
+	window.clearTimeout(timer);
+}
+
+</script>
+</head>
+
+<body>
+<input type="button" id="result" value="该程序已经运行了0秒！" /><br />
+<input type="button" onclick="start()" value="开始" />
+<input type="button" onclick="stop()" value="停止" />
+</body>
+</html>

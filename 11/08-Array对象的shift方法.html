@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+	var arr = ["星期日","星期一","星期二","星期三","星期四","星期五","星期六"];
+
+	document.write("数组当前的长度为:"+ arr.length +"<br>")
+	    arr.shift();
+	document.write("数组当前的长度为:"+ arr.length +"<br>")
+	arr.pop();
+	document.write("数组当前的长度为:"+ arr.length +"<br>")
+	arr.unshift("周日")
+	document.write("数组当前的长度为:"+ arr.length +"<br>")
+
+	arr.push("周日")
+	document.write("数组当前的长度为:"+ arr.length +"<br>")
+
+		
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
+<!-- Array对象
+1、length属性
+	功能：统计数组中元素的个数
+	举例：var len = arrObj.length
+
+2、 join()方法
+	功能：将数组中各个元素，通过指定的连接符，连成一个字符串。
+	语法：string arrObj.join(连接符)
+	举例：var str = arrObj.join(“,”)
+
+3、删除数组元素shift()、pop()，与delete运算符的区别
+	shift()：删除数组中第一个元素，并将数组的长度减一；
+	pop()：删除数组中最后一个元素，并将数组的长度减一；
+var arr = ["星期日","星期一","星期二","星期三","星期四","星期五","星期六"];
+document.write("数组当前的长度为："+arr.length+"<hr>");
+arr.shift();
+document.write("数组当前的长度为："+arr.length+"<hr>");
+arr.pop();
+document.write("数组当前的长度为："+arr.length+"<hr>");
+说明：delete只能删除数组元素的值，而所占空间还存在；shift()和pop()删除数组元素后，所占空间不存在。
+
+4、增加数组元素unshift()和push()方法
+	unshift()：在数组的开头增加一个元素，并将数组的长度加一；
+	push()：在数组的结尾增加一个元素，并将数组的长度加一；
+
+	注意：shift()、pop()、unshift()、push()它们是直接在原数组进行操作，因此不需要再创建变量
+
+5、反转数组元素的顺序reverse()
+var arr = [1,2,3,4,5,6,7];
+arr.reverse(); //反转数组中元素的顺序
+document.write(arr);  //[7,6,5,4,3,2,1]
+6、数组中元素的排序sort()
+	功能：对数组中元素进行排序
+	语法：sort([sortby])
+	参数：
+		如果没有指定sortby参数，默认排序是按照字母的先后顺序排序的；
+		sortby是一个函数名，这个函数规定元素的排序规则
+arr.sort(orderby); //将函数的地址传给sort方法
+function orderby(a,b)
+{
+	return a-b;   //对数值大小进行排序
+}
+a-b的结果：
+		a-b >0  返回大于0的值
+				a-b = 0  返回等于0的值
+				a-b < 0  返回小于0的值
+
+//实例：按拼音的先后顺序排列
+var arr = ["安庆市","安徽省","河南省","河北省","北京市"];
+arr.sort(orderby2);
+function orderby2(str1,str2)
+{
+	return str1.localeCompare(str2);
+}
+document.write(arr);
+
+
+ -->

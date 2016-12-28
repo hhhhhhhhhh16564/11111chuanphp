@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript">
+/*
+	(1)网页加载完成，图片开始轮换
+	（2）图片循环显示，需要用到定时器
+	（3）将构建的src的新值，重新写入到id=img0的对象中去
+*/
+var i = 1;//全局变量
+function swapImg()
+{
+	i++;//第一次因为已经有一张图片显示了，第一遍应该从2开始，第二遍循环应该1开始
+	//先取到id=img0的对象
+	var obj = document.getElementById("img0");
+	var str = "images/dd_scroll_"+i+".jpg";
+	//修改id=img0对象的src属性的值
+	obj.src = str;
+	//条件判断
+	if(i>=6)
+	{
+		i= 0;
+	}
+}
+function start()
+{
+	//setInterval()重复执行
+	window.setInterval("swapImg()",1000);
+}
+</script>
+</head>
+
+<body onload="start()">
+<img id="img0" src="images/dd_scroll_1.jpg" />
+</body>
+</html>

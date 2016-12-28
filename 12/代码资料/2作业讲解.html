@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript">
+//5、（字符，偏难）利用var s1 = prompt(“请输入任意字符”,””)可以获取用户输入的字符（存到变量s1中了），试编程将用户输入的字符“反转顺序”并首尾字母转为大写，其他字母转为小写后alert出来。
+/*
+	（1）获取用户输入的英文单词
+	（2）将字符串先转成小写  toLowerCase()
+	（3）首尾字母大写        toUpperCase()
+	（4）将字符串反转顺序    reverse()
+	（5）字符串转数组：split()
+	
+	beijing
+*/
+var str = window.prompt("请输入一个英文单词");
+str = str.toLowerCase(); //转小写
+var arr = str.split(""); //空字符串分割
+arr[0] = arr[0].toUpperCase();//首字母转大写
+arr[arr.length-1] = arr[arr.length-1].toUpperCase();
+arr.reverse(); //反转
+str = arr.join("");  //将数组转成字符串
+document.write(str);
+</script>
+</head>
+
+<body>
+</body>
+</html>

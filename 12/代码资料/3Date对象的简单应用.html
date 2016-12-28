@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="refresh" content="1" />
+<title>无标题文档</title>
+<script type="text/javascript">
+//（1）创建一个Date对象
+var today = new Date();
+//取出年、月、日
+var year = today.getFullYear();
+var month = today.getMonth()+1;
+var day = today.getDate();
+//获取毫秒数
+var milliSec = today.getMilliseconds();
+var milliSec2 = today.getTime();
+//（2）将日期信息，连接成一个字符
+var str = "<h1>今天是："+year+"年"+month+"月"+day+"日";
+str += " 毫秒数："+milliSec+"距离1970年毫秒数："+milliSec2;
+str += "</h1>";
+document.write(str);
+
+
+
+</script>
+</head>
+
+<body>
+</body>
+</html>

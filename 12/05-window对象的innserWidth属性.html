@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		
+		window.name = "current";//当前窗口的名称
+		var width = window.innerWidth ? window.innerWidth : document.documentElement.clientWidth;
+		var height = width.innerHeight ? width.innerHeight : document.documentElement.clientHeight;
+
+		var str = "宽度:"+width+"高度: "+ height;
+		document.write(str+ "," + window.name);
+
+		function confirmDel(){
+			if (window.confirm("你真的要删除吗?")) {
+				// 通过PHP连接MySql，自画像真的数据库
+				window.alert("id=345的文章已经被删除");
+
+			}
+
+
+		}
+
+
+	</script>
+</head>
+<body>
+<br/>
+	
+	<a href="javascript:void(0)" onclick="confirmDel()">删除</a>
+	<a href="javascript:window.print()">打印当前网页</a>
+	<a href="javascript:window.close()">关闭窗口</a>
+
+</body>		
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript">
+//实例：根据系统时间，输出“今天是星期几”
+//核心问题：如何获取到系统时间中的星期的值
+//（1）创建一个Date()的实例对象
+//Date()是JS的内置对象，主要用于获取系统时间信息的
+var today = new Date();
+//日期时间对象的一个方法getDay()，用来获取当前系统的星期值(0-6)0代表星期天
+var week = today.getDay();
+//根据week的不同取值，分别输出结果
+switch(week)
+{
+	case 1:
+		str = "一";
+		break;
+	case 2:
+		str = "二";
+		break;
+	case 3:
+		str = "三";
+		break;
+	case 4:
+		str = "四";
+		break;
+	case 5:
+		str = "五";
+		break;
+	case 6:
+		str = "六";
+		break;
+	default:
+		str = "日";
+}
+var str = "今天是：星期"+str;
+document.write(str);
+
+</script>
+</head>
+
+<body>
+</body>
+</html>

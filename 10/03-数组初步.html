@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <script type="text/javascript">
+    var arr = new Array();
+
+    //增加数组元素，数组的值可以是任何的数据类型
+    // 字符串、 数值、布尔、undefined、null、array 、object、function
+
+    arr[0] = 10;
+    arr[11] = 12;
+    arr[3] = true;
+    arr[4] = "abe";
+    arr[9] = 990;
+
+    document.write(arr + ", 长度为:" + arr.length);
+
+
+    //删除一个数组元素
+    delete arr[arr.length - 1]; // 删除最后一个元素
+
+    //删除元素后，再统计数组的长度
+    document.write("<hr>" + arr + ", 长度为:" + arr.length + "<br><br>");
+
+    //创建二维数组
+    var students = new Array();
+    students[0] = 0;
+    students[1] = [10, 20, 30, 40];
+
+    document.write(students);
+
+    document.write(students + ", 长度为:" + students.length + "1 3 下表为"+students[1][3]);
+    </script>
+</head>
+
+<body>
+</body>
+
+
+<!-- 一、数组的基本概念
+数组就是一组数据有序排列的一个集合。例如：var arr = [10,20,30,40,50]
+数组元素：数组中的每一个值，就叫一个数组元素。比如：20就是一个数组元素
+数组索引：数组中的第一个元素，都有一个编号(索引、下标)，索引号是从0开始的正整数，依次为0、1、2……
+数组元素的访问：数组名称连上[]，[]中是元素的索引号，例如：arr[4]=50，arr[0]=10
+数组的长度：指数组中元素的个数
+问题：数组的长度，与数组中最大索引号有什么关系？也就是：数组个数-1=数组的最大索引号
+二、创建一个数组
+（1）使用new运算符结合Array()构造函数来创建
+方式一：创建一个未知长度的数组
+var arr = new Array();
+//增加数组元素，数组的值可以是任何的数据类型
+//字符串、数值、布尔、undefined、null、array、object、 function
+arr[0] = 10;
+arr[1] = 20;
+arr[2] = true;
+arr[3] = "abc";
+arr[4] = undefined;  //相当于  arr[4];
+//打印输出所有的值，通过document.write输出数组时，将自动转换成一个字符串输出
+document.write(arr);
+    方式二：创建指定长度的数组，()中只有一个整数
+        var arr = new Array(3); //创建一个包含3个元素的数组
+        arr[0] = 10;
+        arr[1] = 20;
+        arr[2] = 30;
+    方式三：将多个数组元素添加小括号()中，各个元素间用逗号隔开
+        var arr = new Array(10,20,30,40,50);
+        arr[0] = arr[0] + 90;   //将第0个元素加上90
+        document.write(arr[0]);  //结果为100
+（2）使用中括号[]来创建一个数组
+    var arr = [10,20,30,40];
+    var arr = [“周列生”,true,30,“大专”,“毕业院校”];
+
+三、数组的基本操作
+（1）增加数组元素
+        var arr = [10,20,30];
+        arr[10] = 100;
+        arr[99] = 990;
+（2）修改数组元素的值：
+        arr[10] = 100;
+（3）删除一个数组元素
+        删除数组元素，使用delete运算符；
+        例如：delete arr[0];  //删除下标为0的数组元素
+        注意：用delete删除数组元素时，只是将内容清除，但所占空间还存在。
+ -->
+
+</html>

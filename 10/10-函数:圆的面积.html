@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <script type="text/javascript">
+    function getArea(r) {
+        var area = 3.14 * r * r;
+        area = area.toFixed(2) // 对值进行四舍五入后，保留两位小数
+        return area; // 将变量area的值返回，返回调用函数者
+    }
+    //调用函数
+    var area = getArea(3); //将函数的返回值，赋给area变量
+    document.write("<br>半径为3的圆的面积：" + area);
+    var area1 = getArea(5);
+    document.write("<br>半径为5的圆的面积：" + area1);
+    var area2 = getArea(8.5);
+    document.write("<br>半径为8.5的圆的面积：" + area2);
+    </script>
+</head>
+<body>
+</body>
+
+</html>
+
+<!-- 
+
+
+
+ -->

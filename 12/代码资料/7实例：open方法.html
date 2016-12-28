@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript">
+//实例：弹出一个新窗口
+/*
+	（1）网页加载完成，弹出一个新窗口，新窗口名称叫“current”
+	（2）新窗口的尺寸：宽400px，高300px
+	（3）新窗口在屏幕中“居中”显示
+	（4）新窗口在10秒钟后，自动关闭
+	（5）往新窗口中，可以写入点内容
+*/
+//参数变量定义
+var width = 400;
+var height = 300;
+var screenLeft = (screen.width - width)/2;  //指屏幕的总宽，含任务栏
+var screenTop = (screen.height - height - 100)/2; //指屏幕的总高，含任务栏
+var url = "";
+var name = "current";
+var options = "width="+width+",height="+height+",left="+screenLeft+",top="+screenTop;
+// options += ",menubar=no,toolbar=no,status=no,scrollbars=no";
+//弹出一个新窗口
+var win = window.open(url,name,options);
+//往新窗口中加点内容
+var str = "<h2>我是输出来的</h2>";
+str += "<p>我是一个段落，欢迎大家光临！</p>";
+win.document.write(str);
+
+//新窗口在10秒钟后，自动关闭
+window.setTimeout("win.close()",2000);
+</script>
+</head>
+
+<body>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

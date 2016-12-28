@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript">
+//将以下数组中的年龄，在函数中修改为40岁，并在函数内外分别打印出数组的内容
+var arr = ["周更生",30,"大专","北京理工大学"];
+//定义一个函数，函数接收一个数组，数组是一个复合数据类型
+//复合数据类型传的是一个地址，而不是真的数据
+function edit(arr2)
+{
+	arr2[1] = 24; //修改数组元素
+	arr2[arr2.length] = "广州市";//在数组最后添加一个元素
+	document.write(arr2);
+}
+//调用函数
+edit(arr);
+document.write("<hr >"+arr);
+</script>
+</head>
+
+<body>
+</body>
+</html>

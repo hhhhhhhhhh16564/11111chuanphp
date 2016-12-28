@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+
+var i = 1;
+		function swapImg(){
+			i++;
+
+		var obj = document.getElementById("img");
+
+		var str = "images/dd_scroll_" +i+".jpg";
+
+		obj.src= str;
+
+		if (i >=6) {}
+			i = 0;
+
+		}
+
+function start(){
+
+window.setInterval("swapImg()", 1000);
+
+}
+
+
+	</script>
+</head>
+<body onload="start()">
+
+<img id="img" src="images/dd_scroll_1.jpg">
+
+</body>
+</html>

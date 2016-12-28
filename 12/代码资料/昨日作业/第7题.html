@@ -1,0 +1,20 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript">
+//7、（函数）定义一个函数，获得任意邮箱的用户名和域名。
+var email = "beijing@126.com";
+getInfo(email);//调用函数
+function getInfo(str)
+{
+	var arr = str.split("@");
+	document.write("用户名："+arr[0]+",域名："+arr[1]);
+}
+</script>
+</head>
+
+<body>
+</body>
+</html>

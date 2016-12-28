@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+	//1 创建一个Date对象
+	var today = new Date();
+	var year = today.getFullYear();
+	var mouth = today.getMonth();
+	var day = today.getDate();
+
+	//获取毫秒数
+	var milliSec = today.getMilliseconds();
+	var milliSec2 = today.getTime();
+
+	//（2) 将日期信息，连接成一个字符串
+	var str = "<h1> 今天是："+year+"年"+mouth+"月"+day+"日";
+
+	str += "毫秒数" + milliSec + "距离1970年毫秒数: " + milliSec2;
+
+	str += "</h1>";
+	document.write(str);
+	
+	</script>
+</head>
+<body>
+
+</body>
+</html>

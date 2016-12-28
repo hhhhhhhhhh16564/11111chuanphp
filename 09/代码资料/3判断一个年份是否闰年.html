@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript">
+//实例：判断一个年份是否是闰年
+//判断闰年的条件：
+//（1）能被4整除，并且不能被100整除
+//（2）能被400整除
+
+//1、定义一个变量
+var year = 2012;
+//2、判断闰年
+if( year%4==0 && year%100!=0 || year%400==0  )
+{
+	//条件为true时，执行的代码
+	document.write(year+"年是一个闰年！");
+}else
+{
+	//条件为false时，执行的代码
+	document.write(year+"年不是一个闰年！");
+}
+
+
+
+</script>
+</head>
+
+<body>
+<a href="javascript:void(100)">凤凰网</a>
+<a href="javascript:void(0)">凤凰网</a>
+<a href="javascript:void(0)">凤凰网</a>
+<a href="javascript:void(0)">凤凰网</a>
+
+</body>
+</html>

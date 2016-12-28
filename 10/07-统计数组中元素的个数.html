@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		// 实例： 统计数组中有效数据的个数
+		var arr = [22,,,,32,43,,,,,,4];
+		var len = arr.length;
+		document.write("数组的长度为: " + len + "<hr>");
+
+		// 使用for循环输出数组中的数据
+		for(var j = 0; j < len; j++){
+
+
+
+			document.write(arr[j] + " ");
+
+		}
+
+		document.write("<hr>");
+
+		//使用for in 遍历数组中的有效个数
+		for(var i in arr){
+			document.write(arr[i] + " ");
+		}
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
+<!-- 
+数组对象(下次课细讲)
+一个数组可以看成一个数组对象，数组元素有许多常用的属性和方法，length属性，用于获取一个数组对象的长度的。
+Var arr = [10,20,30,,,,,,40,90,89,87,,,,90];  //两个逗号间如果没有值，则认为是undefined
+Var len = arr.length;   //将数组的长度赋给一个变量
+
+
+
+for…in循环语句
+功能：主要循环(遍历)对象的所有属性或数组中的所有元素。它对数组中undefined元素不作输出。
+语法：
+for(变量名 in 对象名称)
+{
+	循环体代码；
+}
+举例1：遍历window对象的所有属性
+for(name in window)
+{
+	document.write(name+”<br>”);
+}
+实例2：遍历数组中的所有有用的元素
+	Var arr = [45,44,,,,,,32,,,,,,,,,,,,,,,21,333,,,,,,,,,,,432];
+	//使用for in遍历数组中有效个数
+for(var i in arr)
+{
+	document.write(arr[i]+" ");
+}
+
+
+break(中断)语句和continue(继续)语句
+break可以无条件结束：for、for…in、while、do while、switch语句。
+一般情况下，需要在break之前加条件判断，来决定退出循环的条件。
+break只能退出当前循环，不会多层循环。但在PHP中，break可以退出多层循环。
+举例：循环1－100间所有的数，但大于50的就不再输出了。
+for(var i=1;i<100;i++)
+{
+	if(i>50)
+{
+		break;  //退出循环，直接跳转到for的结束大括号之后
+}
+document.write(i+”<br>”);
+}
+continue语句，结束本次循环，去开始下一次循环。
+一般情况下，要在continue之前加一个条件判断，用于执行代码的时机。
+
+
+
+ -->

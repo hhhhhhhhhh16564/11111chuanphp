@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+	// 	手机验证：
+	// （1）长度为11位
+	// （2）是不是纯数字
+	// （3）手机号是不能为空
+
+//（1）获取用户用户信息
+ var tel = window.prompt("请输入你的手机号");
+checkTel(tel);
+
+
+function checkTel(str){
+	if (isEmpty(str)) {
+		document.write("手机号码不能为空! ");
+	}else if(str.length != 11){
+
+		document.write("手机号码位数不对 ！");
+	}else if (isNaN(str)) {
+		document.write("手机号码中含有非法字符! ")
+
+	} else{
+		document.write("手机号码输入正确！")
+	}
+
+}
+
+function isEmpty(value){
+	if (value == "") {
+		return true;
+	}
+
+	return false;
+}
+
+
+
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

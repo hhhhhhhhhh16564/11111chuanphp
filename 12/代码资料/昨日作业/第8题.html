@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript">
+//8、（函数）定义一个函数，用来判断用户输入的是否是手机号？
+var tel = window.prompt("请输入你的手机号");
+checkTel(tel); //调用函数
+function checkTel(str)
+{
+	if(str=="")
+	{
+		document.write("手机号码不能为空");
+	}else if(str.length!=11)
+	{
+		document.write("手机位数不够！");
+	}else if(isNaN(str))
+	{
+		document.write("手机号码不合法！");
+	}else
+	{
+		document.write("<font color=blue>手机号码输入正确！</font>");
+	}
+}
+
+</script>
+</head>
+
+<body>
+</body>
+</html>

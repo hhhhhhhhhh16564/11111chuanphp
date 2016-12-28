@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript">
+//实例：动态时钟
+/*
+	（1）时间日期信息，应该在一个<div>中来显示
+	（2）定时器：每隔一秒再次访问系统时间，window对象的setTimeout()
+	（3）时钟显示的时机(事件)：当网页加载完成后才显示，事件onload
+	（4）如何将 时间日期信息 写入到指定的<div>中，DOM对象中的innerHTML属性
+*/
+
+//定义函数：构建要显示的时间日期字符串
+function showTime()
+{
+	//创建Date对象
+	var today = new Date();
+	//分别取出年、月、日、时、分、秒
+	var year = today.getFullYear();
+	var month = today.getMonth()+1;
+	var day = today.getDate();
+	var hours = today.getHours();
+	var minutes = today.getMinutes();
+	var seconds = today.getSeconds();
+	//如果是单个数，则前面补0
+	month 	= month<10 	? "0"+month : month;
+	day 	= day  <10 	? "0"+day : day;
+	hours 	= hours<10 	? "0"+hours : hours;
+	minutes	= minutes<10 ? "0"+minutes : minutes;
+	seconds = seconds<10 ? "0"+seconds : seconds;
+	
+	//构建要输出的字符串
+	var str = year+"年"+month+"月"+day+"日 "+hours+":"+minutes+":"+seconds;
+	
+	//获取id=result的对象
+	var obj = document.getElementById("result");
+	//将str的内容写入到id=result的<div>中去
+	obj.innerHTML = str;
+	//延时器
+	window.setTimeout("showTime()",1000);
+}
+</script>
+<style type="text/css">
+#result{
+	width:500px;
+	border:1px solid #CCCCCC;
+	background:#FFFFCC;
+	margin:50px auto;
+	font-size:24px;
+	color:#FF0000;
+	padding:20px;
+}
+</style>
+</head>
+
+<body onload="showTime()">
+<div id="result"></div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript">
+//实例：用JS输出一个表格制作的个人信息
+//（1）定义变量，变量初始化
+var name = "刘晓庆";
+var sex = false;
+var age = 30;
+var edu = "大专";
+var time = "2010年5月";
+var school = "毕业院校";
+//（2）构建输出的表格
+var str = "";
+str += '<table width="500" style="border-collapse:collapse;" border="1" cellspacing="0" cellpadding="2">';
+str += '  <tr>';
+str += '    <td colspan="4" align="center"><h2><font color="#FF0000">'+name+'的基本资料</font></h2></td>';
+str += '  </tr>';
+str += '  <tr>';
+str += '    <td align="right">姓名：</td>';
+str += '    <td>'+name+'</td>';
+str += '    <td align="right">性别：</td>';
+str += '    <td>'+(sex ? '男' : "女" )+'</td>';
+str += '  </tr>';
+str += '  <tr>';
+str += '    <td align="right">年龄：</td>';
+str += '    <td>'+age+'</td>';
+str += '    <td align="right">学历：</td>';
+str += '    <td>'+edu+'</td>';
+str += '  </tr>';
+str += '  <tr>';
+str += '    <td align="right">毕业时间：</td>';
+str += '    <td>'+time+'</td>';
+str += '    <td align="right">毕业院校：</td>';
+str += '    <td>'+school+'</td>';
+str += '  </tr>';
+str += '</table>';
+
+//（3）输出结果
+document.write(str);
+</script>
+</head>
+
+<body>
+
+</body>
+</html>

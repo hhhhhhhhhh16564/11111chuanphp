@@ -50,3 +50,29 @@
     </div>
 </body>
 </html>
+
+
+<!-- Date对象
+一、创建一个Date对象
+1、使用new关键字和Date()来创建当前系统的时间日期对象
+    var today = new Date();  //通过调用today日期对象的属性和方法，来完成一些功能
+2、使用new关键字和Date()来创建，但是参数可以是一个日期时间的一个字符串
+    var yestoday = new Date(“1990/10/12 10:08:08”); //过去的一个日期对象
+    var tomorrow = new Date(“2030-10-10”);  //将来的一个日期对象
+3、使用new关键字和Date()来创建，但是参数是一个数值的日期时间，包括：年、月、日、时、分、秒
+    var yestoday = new Date(year,month,day,hours,minutes,seconds,milliseconds);
+    说明：各个参数的顺序不可颠倒，参数可以从右向左省略，但年、月、日必须写
+举例：var yestoday = new Date(1990+20,10,12,10,10);   //数值参数是可以进行运算的
+
+二、Date对象常用的方法
+getFullYear()：取得四位的年份，比如：2000
+getMonth()：取得当前的月份，取值0-11
+getDate()：取得今天是几号，取值1-31
+getHours()：取得小时数
+getMinutes()：取得分钟数
+getSeconds()：取得秒数
+getMilliSeconds：取得毫秒数
+getTime()：取得1970年1月1日到现在的毫秒数
+toLocaleString()：用本地字符串来显示日期时间信息
+toLocaleDateString：用本地字符串来显示日期信息
+ -->

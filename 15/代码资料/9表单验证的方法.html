@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>无标题文档</title>
+<script type="text/javascript">
+//当用户名获得焦点时，调用函数
+function username_focus()
+{
+	var obj = document.getElementById("username_result");
+	obj.style.color = "#666";
+	obj.innerHTML = "请输入你的用户名！";
+}
+//定义函数：当失去焦时验证用户名
+function username_blur()
+{
+	var obj = document.getElementById("username_result");
+	var value = document.form1.username.value;
+	if(value=="")
+	{
+		obj.style.color = "#ff0000";
+		obj.innerHTML = "用户名不能为空";
+		return false;  //把结果返回checkForm()函数
+	}else if(value.length<5 || value.length>20)
+	{
+		obj.style.color = "#ff0000";
+		obj.innerHTML = "用户名长度应介于5-20之间";
+		return false;
+	}else
+	{
+		obj.style.color = "#009900";
+		obj.innerHTML = "用户名合法！";
+		return true;
+	}
+}
+//函数：密码获得焦点
+function password_focus()
+{
+	var obj = document.getElementById("password_result");
+	obj.style.color = "#666";
+	obj.innerHTML = "请输入你的密码！";
+}
+//函数：当失去焦点时，进行验证密码
+function password_blur()
+{
+	var obj = document.getElementById("password_result");
+	var value = document.form1.password.value;
+	if(value.length==0)
+	{
+		obj.style.color = "#ff0000";
+		obj.innerHTML = "密码不能为空";
+		return false;
+	}else if(value.length<5 || value.length>20)
+	{
+		obj.style.color = "#ff0000";
+		obj.innerHTML = "密码长度应介于5-20之间的字符";
+		return false;
+	}else
+	{
+		obj.style.color = "#009900";
+		obj.innerHTML = "密码合法！";
+		return true;
+	}
+}
+//函数：点击“提交”按钮时，来一个统计的验证
+function checkForm()
+{
+	//将用户名失去焦点的验证的结果，赋给一个变量
+	var flagUsername = username_blur();
+	var flagPassword = password_blur();
+	if(flagUsername && flagPassword)
+	{
+		alert("验证通过");
+		return true;
+	}else
+	{
+		alert("验证失败");
+		return false;
+	}
+}
+//函数初始化
+function init()
+{
+	document.form1.username.focus();
+}
+</script>
+</head>
+<body onload="init()">
+<form name="form1" method="get" action="login.php" onsubmit="return checkForm()">
+<table width="500" border="0" align="center">
+	<tr>
+		<td align="right"><b>用户名：</b></td>
+		<td><input type="text" name="username" onfocus="username_focus()" onblur="username_blur()" /></td>
+		<td width="250"><span id="username_result"></span></td>
+	</tr>
+	<tr>
+		<td align="right"><b>密码：</b></td>
+		<td><input type="password" name="password" onfocus="password_focus()" onblur="password_blur()" /></td>
+		<td><span id="password_result"></span></td>
+	</tr>
+	<tr>
+		<td align="right">&nbsp;</td>
+		<td colspan="2"><input type="submit" value="提交表单" /></td>
+	</tr>
+</table>
+</form>
+</body>
+</html>

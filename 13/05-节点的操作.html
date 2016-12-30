@@ -1,0 +1,133 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>节点的操作</title>
+	<script type="text/javascript">
+		function read_node_table() {
+			//body节点
+			var node_body = document.body;
+			//table节点
+			var node_table = node_body.firstChild;
+			alert(node_table.nodeName);
+			
+
+		}
+
+		function read_node_tr(){
+
+
+				//body节点
+			var node_body = document.body;
+			//table节点
+			var node_table = node_body.firstChild;
+			// tbody节点
+			var node_tbody = node_table.firstChild;
+			var node_trs = node_tbody.childNodes;
+
+			alert(node_trs[1].nodeName);
+
+
+
+		}
+
+   function edit_node_td(){
+			//body节点
+			var node_body = document.body;
+			//table节点
+			var node_table = node_body.firstChild;
+			// tbody节点
+			var node_tbody = node_table.firstChild;
+			var node_trs = node_tbody.childNodes;
+
+			//tr节点
+			var node_tr= node_trs[1];
+
+			//td节点
+			var node_td = node_tr.lastChild;
+
+			//文本节点也是一个子节点
+			var node_text = node_td.firstChild;
+
+			//改编文本节点的值
+
+			node_text.nodeValue = "2017-1-1";
+
+
+			// alert(node_text.nodeValue);
+
+
+   }
+
+
+	</script>
+</head>
+<body><table border='1'><tr><td>编号</td><td>新闻</td><td>发布日期</td></tr><tr><td>1001</td><td>广州传智播客开课了！</td><td>2014-07-06</td></tr></table>
+
+<input type="button" value="访问talbe节点" onclick="read_node_table()">
+<input type="button" value="访问tr节点" onclick="read_node_tr()">
+<input type="button" value="修改日期" onclick="edit_node_td()">
+	
+</body>
+</html>
+
+<!-- OM简介
+DOM是W3C制定的一个规范(标准)，让程序可以动态的修改或改变网页元素的内容、样式、结构。
+DOM分类
+核心DOM：是提供了操作HTML和XML文档的各种属性，是公共DOM，定义了一些公共的属性和方法。
+XML DOM：针对XML操作的接口，也是一些属性和方法。
+HTML DOM：针对HTML文档操作的接口，也是一些属性和方法。
+Event DOM：事件对象模型，提供了一些常用的事件。比如：onclick、onload、onchange
+CSS DOM：让JS去操作和访问CSS的各种属性。
+
+HTML节点树
+
+HTML节点树的相关概念：
+	一个HTML文档，只有一个根元素，就是<html>标记
+	父节点(parentNode)：当前节点的上一级元素；
+	子节点(childNode)：当前节点的下一级元素；
+	兄弟节点：相邻的两个节点，同属于一个父节点。
+
+
+DOM节点类型
+DOM中一共定义了12种节点类型，对于HTML文档的节点类型有5个：
+Document文档节点：对应于当前网页文档，它对应的对象是document对象
+Element元素节点：所有的HTML标记都叫“元素节点”，每个元素(标记)都对应一个“元素对象”；
+Text文本节点：是指标记中的文本，是最底层的节点，它下面不能再有其它子节点。
+Attribute属性节点：是指元素中所有的属性构成的节点列表。一个标记有多个属性。
+Comment注释节点
+
+
+
+核心DOM——Node节点属性——公共的属性和方法
+对节点操作：增加节点、删除节点、修改节点内容、读取节点
+一、节点访问的属性
+nodeName：节点的名称
+nodeValue：节点的值
+firstChild：第一个子节点（存在兼容性问题）
+lastChild：最后一个子节点（存在兼容性问题）
+childNodes：子节点列表，是一个数组
+
+注意：访问节点的操作，都是以document为起点的。
+访问<html>节点的方法：
+document.firstChild
+document.documentElement
+访问<body>节点的方法：
+（1）document.firstChild.lastChild
+（2）document.body
+
+为什么在访问<body>下的子节点时，会返回一个#text文本节点？
+	核心DOM中的属性和方法，是针对HTML文档，而不是XHTML文档。先去掉DTD定义。
+	Firefox中会把换行或空格当成一个文本节点。
+
+
+二、节点属性的修改
+	setAttribute(name,value)：给一个节点增加属性，name是属性名，value是属性值
+// 可以直接用. 语法赋值
+
+
+	removeAttribute(name)：删除节点的属性
+	getAttribute(name)：获取一个节点属性的值
+	<img />
+	举例：img.setAttribute(“src”,”images/bg.gif”)
+ -->

@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript">
+//实例：根据不同浏览器，来输出window对象的innerWidth
+var str = "浏览器名称："+navigator.appName;
+str += "<br>版本号："+navigator.appVersion;
+str += "<br>操作系统："+navigator.platform;
+str += "<br>系统语言："+navigator.systemLanguage;
+str += "<br>用户语言："+navigator.userLanguage;
+document.write(str+"<hr>");
+
+//根据不同的浏览器，输出窗口的尺寸
+if(navigator.appName=="Netscape")
+{
+	//Firefox浏览器
+	document.write("width："+window.innerWidth+"，height："+window.innerHeight);
+}else
+{
+	//IE
+	var width = document.documentElement.clientWidth;
+	var height = document.documentElement.clientHeight;
+	document.write("width："+width+"，height："+height);
+}
+</script>
+</head>
+
+<body>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <script type="text/javascript">
+    // 		（1）网页背景是黑的
+    // （2）星星随机大小：min=15,max=80
+    // （3）星星的坐标是随机的：x_left=0,x_right=(浏览器宽-星星宽)
+    // 						y_top=0,y_bottom=?
+    // （4）单击某个星星，星星消失
+    // （5）网页加载完成，开始显示星星
+    // （6）定时器：每隔一个周期，插入一个星星
+    //定义全局变量
+    var img_width_min = 15;
+    var img_width_max = 80;
+    var x_left = 0;
+    var x_right = 0;
+    var y_top = 0;
+    var y_bottom = 0;
+    //定义初始化函数
+    function init() {
+        // document.body.bgColor = "#000";
+        document.body.setAttribute("bgColor","#000");
+        x_right = window.innerWidth - img_width_max;
+        y_bottom = window.innerHeight - img_width_max;
+        window.setInterval("showStart()", 100);
+      
+    }
+    function showStart(){
+        //创建一个图片
+        var node_img = document.createElement("img");
+        var width = getRandom(img_width_min, img_width_max);
+        var x = getRandom(x_left, x_right);
+        var y = getRandom(y_top, y_bottom);
+        //增加src的属性
+        node_img.setAttribute("src", "images/xingxing.gif");
+//    可以直接用.语法赋值
+     // node_img.src = "images/xingxing.gif";
+        //增加style属性
+        var style = "position:absolute;left:" + x + "px;top:" + y + "px;";
+        style += "width: " + width + "px;";
+        node_img.setAttribute("style", style);
+        node_img.setAttribute("onclick","removeImg(this)");
+        document.body.appendChild(node_img);
+        
+    }
+    function getRandom(min, max) {
+        return Math.floor(Math.random() * (max - min) + min);
+    }
+function removeImg(obj){
+	document.body.removeChild(obj);
+}
+    </script>
+</head>
+<body onload="init()">
+</body>
+</html>
+<!-- OM简介
+DOM是W3C制定的一个规范(标准)，让程序可以动态的修改或改变网页元素的内容、样式、结构。
+DOM分类
+核心DOM：是提供了操作HTML和XML文档的各种属性，是公共DOM，定义了一些公共的属性和方法。
+XML DOM：针对XML操作的接口，也是一些属性和方法。
+HTML DOM：针对HTML文档操作的接口，也是一些属性和方法。
+Event DOM：事件对象模型，提供了一些常用的事件。比如：onclick、onload、onchange
+CSS DOM：让JS去操作和访问CSS的各种属性。
+HTML节点树
+HTML节点树的相关概念：
+	一个HTML文档，只有一个根元素，就是<html>标记
+	父节点(parentNode)：当前节点的上一级元素；
+	子节点(childNode)：当前节点的下一级元素；
+	兄弟节点：相邻的两个节点，同属于一个父节点。
+DOM节点类型
+DOM中一共定义了12种节点类型，对于HTML文档的节点类型有5个：
+Document文档节点：对应于当前网页文档，它对应的对象是document对象
+Element元素节点：所有的HTML标记都叫“元素节点”，每个元素(标记)都对应一个“元素对象”；
+Text文本节点：是指标记中的文本，是最底层的节点，它下面不能再有其它子节点。
+Attribute属性节点：是指元素中所有的属性构成的节点列表。一个标记有多个属性。
+Comment注释节点
+核心DOM——Node节点属性——公共的属性和方法
+对节点操作：增加节点、删除节点、修改节点内容、读取节点
+一、节点访问的属性
+nodeName：节点的名称
+nodeValue：节点的值
+firstChild：第一个子节点（存在兼容性问题）
+lastChild：最后一个子节点（存在兼容性问题）
+childNodes：子节点列表，是一个数组
+注意：访问节点的操作，都是以document为起点的。
+访问<html>节点的方法：
+document.firstChild
+document.documentElement
+访问<body>节点的方法：
+（1）document.firstChild.lastChild
+（2）document.body
+为什么在访问<body>下的子节点时，会返回一个#text文本节点？
+	核心DOM中的属性和方法，是针对HTML文档，而不是XHTML文档。先去掉DTD定义。
+	Firefox中会把换行或空格当成一个文本节点。
+二、节点属性的修改
+	setAttribute(name,value)：给一个节点增加属性，name是属性名，value是属性值
+// 可以直接用. 语法赋值
+	removeAttribute(name)：删除节点的属性
+	getAttribute(name)：获取一个节点属性的值
+	<img />
+	举例：img.setAttribute(“src”,”images/bg.gif”)
+ -->

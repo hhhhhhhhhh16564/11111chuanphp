@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>无标题文档</title>
+<script type="text/javascript">
+function checkForm()
+{
+	var theForm = document.form1;
+	if(theForm.username.value=="")
+	{
+		window.alert("用户名不能为空");
+		return false;
+	}else if(theForm.userpwd.value.length==0)
+	{
+		window.alert("密码不能为空");
+		return false;
+	}else
+	{
+		window.alert("验证通过");
+		return true;
+	}
+}
+</script>
+</head>
+<body>
+<form name="form1" method="get" action="login.php">
+用户名：<input type="text" name="username" />
+密码：<input type="password" name="userpwd" />
+<input type="submit" value="提交表单" onclick="return checkForm()" />
+</form>
+</body>
+</html>

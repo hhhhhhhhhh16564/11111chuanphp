@@ -1,0 +1,40 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript">
+function read_node_table()
+{
+	//<body>节点
+	var node_body = document.body;
+	//<table>节点
+	var node_table = node_body.firstChild;
+	alert(node_table.nodeName);
+}
+function read_node_tr()
+{
+	var node_body = document.body;
+	var node_table = node_body.firstChild;
+	var node_tbody = node_table.firstChild;
+	var node_trs = node_tbody.childNodes; //返回一个数组
+	alert(node_trs[1].nodeName);
+}
+function edit_node_td()
+{
+	var node_body = document.body;
+	var node_table = node_body.firstChild;
+	var node_tbody = node_table.firstChild;
+	var node_trs = node_tbody.childNodes; //返回一个数组
+	var node_tds = node_trs[1].childNodes;  //返回一个数组
+	var node_text = node_tds[2].firstChild; //文本也是节点，是标记的子节点
+	node_text.nodeValue = "2014-05-10";
+}
+</script>
+</head>
+
+<body><table border="1"><tr><td>编号</td><td>新闻标题</td><td>发布日期</td></tr><tr><td>1001</td><td>广州传智播客开课了！</td><td>2014-07-06</td></tr></table>
+<input type="button" value="访问table节点" onclick="read_node_table()" />
+<input type="button" value="访问tr节点" onclick="read_node_tr()" />
+<input type="button" value="修改日期" onclick="edit_node_td()" />
+</body>
+</html>

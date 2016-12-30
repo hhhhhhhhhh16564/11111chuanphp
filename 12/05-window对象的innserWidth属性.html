@@ -34,3 +34,27 @@
 
 </body>		
 </html>
+<!-- 一、window对象的简介
+	Window对象是其它所有子对象的最顶层对象，在书写其它子对象时，window前缀可以省略。
+Window对象是一个全局对象，在网页的任何地方都可以直接调用其属性和方法。
+Window对象及其子对象的属性和方法，都是使用“.”运算符进行连接。
+举例：body对象的访问方式：document.body.bgColor=“#FF0000”
+
+二、window对象的属性
+	closed：判断浏览器窗口的关闭，返回一个布尔值；
+	name：指当前浏览器窗口的名称，一般用于超级链接target使用， window.name简写为name
+	innerWidth：指当前浏览器窗口的宽度，不含滚动条、菜单栏、地址栏、状态栏等。IE低版本不支持。
+		IE中要使用document.documentElement.clientWidth来代替；
+		documentElement代表<html>标记；
+	innerHeight：指当前浏览器窗口的高度，不含滚动条、菜单栏、地址栏、状态栏等。IE低版本不支持。
+		IE中要使用document.documentElement.clientHeight来代替；
+		documentElement代表<html>标记；
+	outerWidth：指浏览器窗口的总宽度，包含滚动条、菜单栏、地址栏、状态栏等。IE低版本不支持，但也没有可以替代的属性。
+	outerHeight：指浏览器窗口的总高度，跟上面一样。
+	课堂练习：输出“窗口的内宽和内宽”，并且兼容所有浏览器。
+
+	常用的窗口的名称：
+	top：代表一个顶层窗口；
+	parent：代表一个父窗口；
+	self：代表当前窗口
+ -->

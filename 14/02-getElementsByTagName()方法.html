@@ -1,0 +1,69 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>获得标签的方法</title>
+    <script type="text/javascript">
+    function init(){
+    	    	var ulObj = document.getElementById("ul");
+    	var arrLi = ulObj.getElementsByTagName("li");
+
+
+    	//这是元素属性，不属于css属性，兼容性不好，不建议这样写
+    	// arrLi[1].style="font-size:32px; color:red;";
+    	arrLi[1].style.fontSize="32px";
+    	arrLi[1].style.color="red";
+
+    	arrLi[3].style.textDecoration="underLine";
+    	// window.alert(arrLi.length);
+    }
+
+
+    </script>
+</head>
+
+<body onload="init()">
+    <ul id="ul">
+        <li>DIV+CSS</li>
+        <li>JavaScript</li>
+        <li>Apache+MySQL</li>
+        <li>PHP+phpMyADmin</li>
+    </ul>
+</body>
+
+</html>
+<!-- HTML DOM
+一、HTML DOM的特性
+    （1）每一个HTML标记，都对应一个元素对象。每个标记，都是一个对象，是一个节点。例如：<img>对应一个img对象，一个<table>标记，对应一个table对象，一个<form>标记，对就form对象等。
+    （2）HTML标记的属性，与元素对象的属性一模一样。
+        <img>标记属性：src、width、border、height等
+        imgObj.src = “images/bg.gfi”;
+        imgObj.width = 400;
+        imgObj.height = 300;
+        imgObj.border = 2;
+
+
+二、访问HTML元素的方法总结
+1、通过document对象的getElementById()方法来访问，返回一个对象
+    <div id=”box”></div>
+    var obj = document.getElementById(“box”);   //获取对象
+    var img = document.createElement(“img”);    //  创建节点
+    img.src = “images/img01.jpg”;   //使用元素对象的属性
+    img.border = 2;
+    img.style.padding = “10px”;  //使用style对象来增加样式
+    img.style.float = “left”;
+    obj.appendChild(img);  //将img节点，追加到id=box中去
+2、通过父元素的getElementsByTagName()方法来访问，返回一个数组对象
+    语法结构：var arrObj = document.getElementsByTagName(“li”)
+    功能描述：取得标记为<li>的一个数组(标记列表)。
+    举例：取得一个<ul>标记中的所有的<li>标记
+        //获取id=ul的对象
+        var ulObj = document.getElementById("ul");
+        //取得所有的li对象的一个数组
+        var arrLi = ulObj.getElementsByTagName("li");
+        //修改第二个和第四个li的样式
+        arrLi[1].style = "font-size:24px;color:#ff0000;";
+        arrLi[3].style.textDecoration = "underline";
+
+ -->

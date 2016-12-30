@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <script type="text/javascript">
+    function init() {
+        var obj = document.getElementById("img01");
+        obj.onmouseover = function() {
+            obj.style.width = obj.offsetWidth * 1.5 + "px";
+        }
+        obj.onmouseout = function() {
+            obj.style.width = obj.offsetWidth / 1.5 + "px";
+        }
+        obj.onclick = jump;
+        obj.style.cursor = "pointer";
+    }
+
+    function jump() {
+        location.href = "http://www.baidu.com";
+    }
+    </script>
+</head>
+
+<body onload="init()">
+    <img src="images/dd_scroll_1.jpg" id="img01">
+</body>
+
+</html>
+<!-- 素对象的属性
+tagName：取一个标记的名称，同 nodeName 一样；
+innerHTML：指标记对中的HTML文本(含有HTML标记的文本)，一般指双边标记；比如：<h2>二级标题</h2>
+style：对应HTML标记的style属性；
+id：对应HTML标记的id属性；
+offsetWidth：指元素的宽度，占据空间；
+offsetHeight：指元素的高度，占据空间，是只读属性；
+scrollWidth：指元素的总宽度，内容；
+scrollHeight：指元素的总高度，内容；
+scrollTop：指内容向上滚动进去的距离，如果没有滚动条，则值为0；
+scrollLeft：指内容向左滚动过去的距离，如果没有滚动条，则值为0；
+ -->

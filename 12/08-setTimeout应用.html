@@ -33,3 +33,48 @@
 </body>
 
 </html>
+
+<!-- 时器setTimeout()方法和clearTimeout()方法
+语法格式：var timer = window.setTimeout(code,milliSec)
+返回值：返回一个延时器，timer是一个数字。
+参数说明：
+    code：是任何JS代码，一般是JS函数；
+    milliSec：是毫秒值，停留多长时间后执行code代码；
+举例：var timer = window.setTimeout(“win.close()”,2000);  //2秒钟后关闭弹出的窗口
+clearTimeout()清除由setTimeout()设置的延时器
+语法格式：clearTimeout(timer)
+千万注意：setTimeout()方法只执行一次，不会重复执行。除非在函数内再次调用自己(递归调用)，可以实现重复执行。
+var timer;  //全局变量
+var i=0;  //变量初始化，全局变量
+//定义函数：开始计时
+function start()
+{
+    //获取id=result的对象
+    var obj = document.getElementById("result");
+    var str = "该程序已经运行了"+i+"秒！";
+    i++; //展开 i=i+1
+    //将变量str的内容写入到id=result中去
+    obj.value = str;  //给表单元素加内容，一般用value属性
+                      //除表单外的其它标记用JS写内容，使用innerHTML
+    
+    //设置延时器
+    timer = window.setTimeout("start()",10);
+}
+//定义函数：停止计时
+function stop()
+{
+    window.clearTimeout(timer);
+}
+
+定时器setInterval()方法和clearInterval()方法
+语法格式：var timer = window.setInterval(code,milliSec)
+说明：setInterval()方法是一个真正的周期执行的定时器，而setTimeout()只执行一次。
+
+clearInterval()清除定时器
+语法：clearInterval(timer)
+
+
+
+
+
+ -->

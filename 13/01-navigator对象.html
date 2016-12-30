@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <script type="text/javascript">
+    var str = "浏览器名称: " + navigator.appName;
+    str += "<br>版本号: " + navigator.appVersion;
+    str += "<br>操作系统: " + navigator.platform;
+    str += "<br>系统语言: " + navigator.systemLanguage;
+    str += "<br>用户语言: " + navigator.userLanguage;
+    document.write(str + "<hr>")
+        //根据不同的浏览器，输出窗口的尺寸
+    if (navigator.appName == "Netscape") {
+        //Firefox浏览器
+        document.write("width: " + window.innerWidth + ", height: " + window.innerHeight);
+    } else {
+        //ID
+        var width = document.documentElement.clientWidth;
+        var height = document.documentElement.clientHeight;
+        document.write("width: " + width + ", height: " + height);
+    }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
+<!-- OM和DOM
+BOM(Brower Object Model，浏览器对象模型)，主要用来访问和操作浏览器各组件的一种方法。
+BOM对象有：window、location、history、screen、navigator、document、frames[]
+DOM(Document Object Model，文档对象模型)，主要用来访问和操作网页元素的一种方法。
+网页元素就是各样的HTML标记。
+DOM对象有：网页中有若干个标记，每个标记就是一个元素，该元素都有一个对应的对象，叫“元素对象”。
+	<html>、<body>、<table>、<div>、<form>、<input>
+	<div id=“result”></div>
+	var obj = document.getElementById(“result”);  //获取到id=result的对象
+	obj.innerHTML = “这里是内容”;  //innerHTML是元素对象的属性
+		
+window对象的属性和方法
+	name：窗口名称
+	innerWidth和innerHeight：指浏览器窗口净宽；
+		document.documentElement.clientWidth和document.documentElement.clientHeight
+		documentElement是<html>元素对应的“元素对象”
+	outerWidth和outerHeight：Firefox支持，IE不支持，也没有可替代的
+	……
+	Close()：关闭窗口
+	Print()：
+	Alter()
+	Prompt()
+	Confirm()：确认对话框，点“确定”返回true
+	setTimeout()     //只执行一次，通过“递归”实现重复执行
+	clearTimeout()
+	setInterval();     //周期执行
+	clearInterval()
+
+onchange事件：当内容(值)发生改变时，去调用一个JS函数
+onload事件：当网页内容(<body>中所有数据)加载完毕时，去调用一个JS函数
+	所有数据：指网页中的内容、图片、视频等都算。因此产生一个jQuery。
+onclick事件：当点击元素时
+补充：checkFileExt(this.value)
+this是一个对象，代表当前正在操作的元素对象。this在这里代表<input type=“file”>对应的“元素对象”
+
+
+
+screen屏幕对象
+width：指屏幕的宽度，含任务栏
+height：指屏幕的高度，是屏幕分辨率
+availWidth：有效宽度，不含任务栏
+availHeight：有效高度，不含任务栏
+
+navigator浏览器软件对象
+appName：指浏览器软件的名称
+appVersion：指浏览器版本号
+platform：操作平台
+systemLanguage：系统语言
+userLanguage：用户语言
+
+//实例：根据不同浏览器，来输出window对象的innerWidth
+var str = "浏览器名称："+navigator.appName;
+str += "<br>版本号："+navigator.appVersion;
+str += "<br>操作系统："+navigator.platform;
+str += "<br>系统语言："+navigator.systemLanguage;
+str += "<br>用户语言："+navigator.userLanguage;
+document.write(str+"<hr>");
+
+//根据不同的浏览器，输出窗口的尺寸
+if(navigator.appName=="Netscape")
+{
+	//Firefox浏览器
+	document.write("width："+window.innerWidth+"，height："+window.innerHeight);
+}else
+{
+	//IE
+	var width = document.documentElement.clientWidth;
+	var height = document.documentElement.clientHeight;
+	document.write("width："+width+"，height："+height);
+}
+
+
+ -->

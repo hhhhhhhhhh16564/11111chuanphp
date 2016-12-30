@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>无标题文档</title>
+<script type="text/javascript">
+function init()
+{
+	//取得id=img01的对象
+	var obj = document.getElementById("img01");
+	//给obj对象，增加一个onmouseover的事件
+	//给img对象绑定了一个onmouseout事件
+	obj.onmouseover = function(){
+				obj.style.width = obj.offsetWidth*1.5+"px";
+			}
+	obj.onmouseout = function(){
+				obj.style.width = obj.offsetWidth/1.5+"px";
+			}
+	//给img对象绑定onclick事件，当事件发生去调用普通函数，实现跳转到ifeng.com
+	obj.onclick = jump;  //将函数地址传给事件，而不是函数执行结果
+	
+	//使用CSS更改鼠标光标类型
+	obj.style.cursor = "pointer";
+}
+function jump()
+{
+	//实现JS跳转
+	location.href = "http://www.ifeng.com";
+}
+</script>
+</head>
+
+<body onload="init()">
+<img id="img01" src="images/dd_scroll_1.jpg" />
+</body>
+</html>

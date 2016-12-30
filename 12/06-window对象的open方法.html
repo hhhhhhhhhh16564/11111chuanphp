@@ -19,3 +19,47 @@
 
 </body>
 </html>
+<!-- 
+三、window对象的方法
+	alert()：弹出一个警告对话框；
+	prompt()：用户输入对话框；
+	confirm()：确认对话框；
+	
+	print()：打印当前网页
+	close()：关闭窗口
+
+	open()：打开一个浏览器窗口
+
+
+弹出一个窗口
+语法格式：var winObj = window.open(url,name,options);
+返回值：返回一个window对象；
+参数说明：
+	url：是要打开的文件的地址，如果为空，则打开一个空白网页；
+	name：给打开的窗口起一个名子，一般用于超链接的target属性来用；
+	options：指打开窗口的外观定义
+		width：打开的窗口的宽度；
+		height：打开的窗口的高度；
+		left：距离屏幕左端的距离；
+		top：距离屏幕顶端的距离；
+		menubar：是否显示菜单栏，取值yes和no
+		toolbar：是否显示工具栏
+		status：是否显示状态栏
+		scrollbars：是否显示滚动条
+		location：是否显示地址栏
+		resizable：是否可以调整窗口大小
+		……
+举例：var winObj = window.open(“table.html”,”current”,”width=400,height=300,left=300,menubar=no,toolbar=no”);
+
+
+延时器setTimeout()方法和clearTimeout()方法
+语法格式：var timer = window.setTimeout(code,milliSec)
+返回值：返回一个延时器，timer是一个数字。
+参数说明：
+	code：是任何JS代码，一般是JS函数；
+	milliSec：是毫秒值，停留多长时间后执行code代码；
+举例：var timer = window.setTimeout(“win.close()”,2000);  //2秒钟后关闭弹出的窗口
+clearTimeout()清除由setTimeout()设置的延时器
+语法格式：clearTimeout(timer)
+千万注意：setTimeout()方法只执行一次，不会重复执行。除非在函数内再次调用自己(递归调用)，可以实现重复执行。
+ -->

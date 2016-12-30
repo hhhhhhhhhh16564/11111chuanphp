@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>无标题文档</title>
+<style type="text/css">
+body,img{margin:0px;padding:0px;}
+</style>
+</head>
+
+<body style="padding-top:500px;">
+<img id="img01" style="width:500px;" src="images/01.jpg" />
+</body>
+</html>
+<script type="text/javascript">
+//取得id=img01的对象
+var obj = document.getElementById("img01");
+//给obj绑定一个onclick事件，调用一个函数get_xy()
+obj.onclick = get_xy;  //是函数传地址，不加括号，也不能带参数
+//定义函数
+function get_xy(e)
+{
+	var str = "窗口坐标："+e.clientX+","+e.clientY;
+	str += "\n网页坐标："+e.pageX+","+e.pageY;
+	str += "\n屏幕坐标："+e.screenX+","+e.screenY;
+	str += "\n事件类型："+e.type;
+	alert(str);
+}
+</script>

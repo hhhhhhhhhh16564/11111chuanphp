@@ -15,3 +15,30 @@
 <body onload="editBg()">
 </body>
 </html>
+
+<!-- Math对象
+Math对象主要提供了数学处理方法。Math中的方法都属于“静态”方法，Math对象不需要创建，直接可以使用。
+在使用Math对象的方法时，必须要加前缀“Math.”
+Math.abs()，取绝对值
+Math.ceil()，向上取整  例如：Math.ceil(4.3) = 5 ，Math.ceil(4.9)=5
+Math.floor()，向下取整 例如： Math.floor(4.4)=4，Math.floor(4.9)=4
+Math.round()，四舍五入
+Math.sqrt()，求平方根
+Math.random()，返回0-1之间的随机小数。0<=X<1
+
+求0-10之间的随机数，10-20之间的随机数，20-30之间的随机数，……
+
+
+案例：动态改变网页背景色
+bgColor=“#898767”，随机颜色取值：100000-999999
+function editBg()
+{
+	var min = 100000;
+	var max = 999999;
+	var random = Math.floor(Math.random()*(max-min)+min);
+	//网页背景色，给document.bgColor的属性赋值
+	document.bgColor = "#"+random;
+}
+
+
+ -->

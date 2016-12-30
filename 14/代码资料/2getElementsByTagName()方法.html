@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>无标题文档</title>
+<script type="text/javascript">
+function init()
+{
+	//获取id=ul的对象
+	var ulObj = document.getElementById("ul");
+	//取得所有的li对象
+	var arrLi = ulObj.getElementsByTagName("li");
+	//修改第二个和第四个li的样式
+	arrLi[1].style = "font-size:24px;color:#ff0000;";
+	arrLi[3].style.textDecoration = "underline";
+}
+</script>
+</head>
+
+<body onload="init()">
+<ul id="ul">
+	<li>DIV+CSS</li>
+	<li>JavaScript</li>
+	<li>Apache+MySQL</li>
+	<li>PHP+phpMyAdmin</li>
+</ul>
+</body>
+</html>

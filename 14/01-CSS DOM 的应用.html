@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>css dom的应用</title>
+    <script type="text/javascript">
+    function init() {
+        var obj = document.getElementById("box");
+        obj.style.width = "600px";
+        obj.style.height = "300px";
+        obj.style.border = "2px dotted #ccc";
+        obj.style.backgroundColor = "#f0f0f0";
+        obj.style.margin = "50px auto";
+        obj.style.fontSize = "24px";
+        obj.style.color = "red";
+    }
+    </script>
+</head>
+<body onload="init()">
+    <div id="box">好好学习，天天向上</div>
+</body>
+</html>
+<!-- 点操作：访问、属性、创建
+（1）节点的访问：firstChild、lastChild、childNodes、parentChild(父子节)
+        可以使用元素对象的方法进行代替：getElementById()、getElementsByTagName()
+（2）节点属性的操作：setAttribute()、removeAttribute()、getAttribute()
+（3）节点的创建、删除、追加：
+创建节点：document.createElement(tagName)
+        删除节点(必须父节点下的子节点才能被删除)：parentObj.removeChild(nodeObj)
+        追加节点：parentObj.appendChild(nodeObj);
+
+CSS DOM
+核心：就是给一个元素对象，增加样式(外观)。
+概述：每一个HTML标记都有一个style属性，它对应元素元素的style属性，该style属性是一个对象。
+    Style对象有哪些属性：style对象的属性，与CSS中的属性一一对应。
+    obj.style.border = “1px solid #FF0000”
+    obj.style.width = “400px”;  //CSS一定要加单位
+    obj.style.position = “absolute”;
+    
+
+<img id=“img”  />是一个HTML标记，它的属性有：src、 width、height、alt、border、style、title等
+每一个标记都对应一个元素对象，元素对象的属性与标记的属性一模一样。
+var obj = document.getElementById(“img”);
+obj.src = “images/bg.gif”;
+obj.width = 400;
+obj.border = 1;
+obj.style = “padding:20px;”
+
+CSS属性与style对象的属性的转换问题
+（1）如果是一个单词的属性，CSS与style属性一模一样；如：obj.style.width = “400px”
+（2）如果是多个单词的属性，转成style对象属性时，转换规则是：第一个单词全小写，后面的单词首字母大写，并且去掉中间的连接线（-）
+    举例：
+            background-color   转换后     obj.style.backgroundColor = “#FF0000”
+            font-size          转换后     obj.style.fontSize = “18px”
+            
+    //获取id=box的对象
+    var obj = document.getElementById("box");
+    //给id=box的对象增加样式
+    obj.style.width = "400px";
+    obj.style.height = "300px";
+    obj.style.border = "2px dotted #ccc";
+    obj.style.backgroundColor = "#f0f0f0";
+    obj.style.margin = "50px auto";
+    obj.style.fontSize = "24px";
+    obj.style.color = "#FF0000";
+ -->

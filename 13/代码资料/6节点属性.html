@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript">
+function change_div_style()
+{
+	var node_body = document.body;
+	var node_div = node_body.firstChild;
+	var style = "width:600px;padding:20px;border:1px solid #cccccc;";
+	style += "margin:0px auto;background-color:#f0f0f0";
+	node_div.setAttribute("style",style);
+}
+function remove_div_style()
+{
+	var node_body = document.body;
+	var node_div = node_body.firstChild;
+	node_div.removeAttribute("style");
+}
+function change_h2_style()
+{
+	var node_body = document.body;
+	var node_div = node_body.firstChild;
+	var node_h2 = node_div.firstChild;
+	var style = "color:#ff0000;text-align:center";
+	node_h2.setAttribute("style",style);
+}
+function change_p_style()
+{
+	var node_body = document.body;
+	var node_div = node_body.firstChild;
+	var arr = node_div.childNodes;  //所有的子元素构成的一个数组
+	for(var i=1;i<arr.length;i++)
+	{
+		arr[i].setAttribute("style","color:#0000ff");
+	}
+}
+</script>
+<style type="text/css">
+/*固定右层*/
+.set{
+	width:220px;
+	border:1px solid #cccccc;
+	background-color:#f0f0f0;
+	padding:10px;
+	position:fixed;
+	right:100px;
+	top:50px;
+}
+</style>
+</head>
+<body><div><h2>判决书：张成泽向外国出卖罗先经济贸易区地皮</h2><p>据新华社“新国际”微博报道，【“天下头号千古逆贼”】判决书说，张成泽借助美国和韩国的“战略忍耐”政策和“等待战略”，从很早用尽一切手段和方法恶毒地企图篡夺党和国家的最高权力，是天下头号千古逆贼、卖国贼。无论岁月流逝、世代交替，白头山血统是绝对不能改变和更换的。判决书：属下称张成泽为“一号同志”】据朝中社，判决书说，张成泽所在的机构和下属单位阿谀奉承，追随份子将他吹捧为“一号同志”，甚至违抗党的指示来讨好。</p><p>据朝中社报道，朝鲜军民获悉党中央政治局扩大会议公报后，要求以革命的名义对反党反革命宗派分子进行严厉审判。在冲天的憎恶和愤怒震撼全国的时候，朝鲜国家安全保卫部特别军事法庭于12日开庭审判千古逆贼张成泽。张成泽作为现代版宗派的头目，长期纠集不纯势力形成分派，怀着篡夺党和国家最高权力的野心，通过种种阴谋和卑鄙手法犯下了试图颠覆国家政权的穷凶极恶的罪行。特别军事法庭对被告人张成泽的罪状进行审理。</p></div>
+<div class="set">
+<input type="button" value="改变层的外观" onclick="change_div_style()" />
+<input type="button" value="移除层的外观" onclick="remove_div_style()" /><br />
+<input type="button" value="改变标题外观" onclick="change_h2_style()" />
+<input type="button" value="移除标题外观" onclick="remove_h2_style()" /><br />
+<input type="button" value="改变内容外观" onclick="change_p_style()" />
+<input type="button" value="移除内容外观" onclick="remove_p_style()" />
+</div>
+</body>
+</html>

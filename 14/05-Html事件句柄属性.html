@@ -1,0 +1,119 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <script type="text/javascript">
+    function changeBig() {
+        var obj = document.getElementById("img01");
+        obj.style.height = obj.offsetHeight * 1.05 + "px";
+
+    }
+
+    function changeSmall() {
+        var obj = document.getElementById("img01");
+        obj.style.height = obj.offsetHeight / 1.05 + "px";
+        // body...
+    }
+    </script>
+</head>
+
+<body>
+    <input type="button" value="放大" onclick="changeBig()">
+    <input type="button" value="缩小" onclick="changeSmall()">
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <img id="img01" src="images/dd_scroll_1.jpg">
+</body>
+
+</html>
+<!-- 元素对象的属性
+tagName：取一个标记的名称，同 nodeName 一样；
+innerHTML：指标记对中的HTML文本(含有HTML标记的文本)，一般指双边标记；比如：<h2>二级标题</h2>
+style：对应HTML标记的style属性；
+id：对应HTML标记的id属性；
+offsetWidth：指元素的宽度，占据空间；
+offsetHeight：指元素的高度，占据空间，是只读属性；
+scrollWidth：指元素的总宽度，内容；
+scrollHeight：指元素的总高度，内容；
+scrollTop：指内容向上滚动进去的距离，如果没有滚动条，则值为0；
+scrollLeft：指内容向左滚动过去的距离，如果没有滚动条，则值为0；
+
+onscroll事件：当内容滚动时，发生的事件。
+综合案例：书读快递
+
+
+核心代码：
+var timer = window.setInterval("scrollUp()",50);
+function scrollUp()
+{
+    if(dome.scrollTop >= dome.offsetHeight)
+    {
+        dome.scrollTop = 0;
+    }else
+    {
+        dome.scrollTop++;
+    }
+}
+
+动作
+事件Event DOM
+主要目的：实现鼠标或键盘与网页进行交互。
+实例：通过鼠标单击图片，实现放大图片
+<img id=“img01” src=“images/01.jpg” onclick=“changeBig()”  />
+function changeBig()
+{
+    //先取得对象
+    Var obj = document.getElementById(“img01”);
+    //将图片的宽度修改为原始大小的2倍
+    obj.style.width = obj.offsetWidth*2;
+}
+
+二、事件和事件句柄
+    什么是事件呢？一般指鼠标干什么了，鼠标的动作。比如：单击(click)、双击(dbclick)、鼠标放上(mouseover)、鼠标移开(mouseout)等
+    什么是事件句柄？每个事件都对应一个事件句柄属性，该属性是HTML标记的事件属性。
+        单击(click)   ——  事件句柄属性 onclick
+        双击(dbclick)  ——  事件句柄属性 ondbclick
+        鼠标放上(mouseover)  ——  事件句柄属性 onmouseover
+
+三、事件模型的分类
+事件模型分类：基本事件模型、DOM事件模型、IE事件模型
+1、基本事件模型：定义了一些常用事件。
+    onclick单击事件
+    ondbclick双击事件
+    onload网页加载完成，一般用于<body>元素
+    onchange：当内容发生改变时，一般用于选择上传文件
+    onscroll：当移动滚动条时(只要可能出现滚动都可以)
+    onmouseover：当鼠标放上时
+    onmouseout：当鼠标移开时
+    onsubmit：当单击“提交按钮”时（用于submit按钮）
+    onreset：当单击“重置按钮”时(用于reset按钮)
+    onfocus：当文本框获得焦点(鼠标光标在文本框中点击)
+    onblur：当文本框失去焦点(鼠标光标在文本框之外点击)
+    onselect：更改下拉列表中的内容时(用于select表单元素)
+2、事件属性的应用
+    （1）每个HTML标记都有事件句柄属性。onClick是HTML标记属性，不分大小写。
+            例如：<img src=“images/01.jpg” onClick=“init()” />
+    （2）HTML标记对应的元素对象也具有事件句柄属性，这个属性必须全小写，因JS区分大小写
+            obj.onclick = init;     //  init是一个函数的地址，而不能加小括号
+            function init(){
+                window.alert(“OK”);
+}
+注意：（1）元素对象绑定事件的名称必须全小写；（2）元素对象的事件必须调用一个函数，可以是普通函数，也可以是匿名函数。
+
+
+
+3、事件返回值
+    事件返回值，对有些事件，会影响默认动作的执行。如：onclick和onsubmit
+    
+ 上图说明：
+当单击<a>时，就将调用show()函数
+在show()中根据用户的不同选择，返回不同值。返回的值有两个：true和false。
+将show()返回的值，再一次返回onclick事件
+onclick事件根据true或false判断，是否要执行默认动作(打开网址)。如果为false，会阻止默认动作执行，为其它则默认动作会继续执行。
+
+ -->

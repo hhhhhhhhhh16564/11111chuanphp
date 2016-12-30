@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <script type="text/javascript">
+    function checkForm() {
+        if (document.form1.username.value == "") {
+            window.alert("用户名不能为空")
+            return false;
+        } else if (document.form1.password.value.length == 0) {
+            window.alert("密码不能为空");
+            return false;
+        } else {
+            return true;
+        }
+    }
+    </script>
+</head>
+<body>
+    <form name="form1" id="form1" action="login.php" method="post" onsubmit="return checkForm()">
+        用户名:
+        <input type="text" name="username"> 密码:
+        <input type="password" name="password">
+        <input type="submit" value="提交表单">
+    </form>
+</body>
+</html>
+<!-- 3、通过name属性来访问（一般用于表单元素）
+    onsubmit事件：当单击“提交按钮”时，发生的事件。事件的返回值，直接决定默认动作的执行。
+    onsubmit的返回值，如果为true或空，则表单提交；如果为false，则阻止表单提交。(下午详细讲)
+<form name="form1" action="login.php" method="post" onsubmit="return checkForm()">
+    用户名：<input type="text" name="username" />
+    密码：<input type="password" name="password" />
+    <input type="submit" value="提交表单" />
+</form>
+<script type="text/javascript">
+function checkForm()
+{
+    //取到表单中各元素
+    if(document.form1.username.value == "")
+    {
+        window.alert("用户名不能为空");
+        return false;
+    }else if(document.form1.password.value.length == 0)
+    {
+        window.alert("密码不能为空");
+        return false;
+    }else
+    {
+        return true;
+    }
+}
+</script>
+ -->

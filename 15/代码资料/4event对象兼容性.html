@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>兼容所有的浏览器</title>
+<script type="text/javascript">
+function get_xy(e)
+{
+	//取得id=img01的对象
+	var obj = document.getElementById("img01");
+	
+	//构建输出的字符串
+	var clientX = e ? e.clientX : event.clientX;
+	var clientY = e ? e.clientY : event.clientY;
+	var screenX = e ? e.screenX : event.screenX;
+	var screenY = e ? e.screenY : event.screenY;
+	var pageX   = event ? event.offsetX   : e.pageX;
+	var pageY   = event ? event.offsetY   : e.pageY;
+	
+	var str = "窗口坐标："+clientX+","+clientY;
+	str += "\n网页坐标："+pageX+","+pageY;
+	str += "\n屏幕坐标："+screenX+","+screenY;
+	alert(str);
+}
+</script>
+
+<style type="text/css">
+body,img{margin:0px;padding:0px;}
+</style>
+</head>
+
+<body style="padding-top:800px;">
+<img id="img01" src="images/01.jpg" onclick="get_xy(event)" />
+</body>
+</html>

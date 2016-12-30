@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>无标题文档</title>
+<script type="text/javascript">
+var str = "<h2>当前地址的相关部分如下：</h2>";
+str += "完整的URL地址："+location.href;
+alert(location.href);
+str += "<br>协议："+location.protocol;
+str += "<br>主机名："+(location.host ? location.host : "主机不存在");
+str += "<br>文件名："+location.pathname;
+str += "<br>查询字符串："+(location.search ? location.search : "查询字符串不存在");
+str += "<br>锚点："+location.hash;
+document.write(str+"<hr>");
+</script>
+</head>
+
+<body>
+<input type="button" value="刷新网页" onclick="javascript:location.reload()" />
+</body>
+</html>

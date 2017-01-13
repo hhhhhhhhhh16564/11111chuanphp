@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+   
+    <style type="text/css">
+    body,
+    img {
+        margin: 0px;
+        padding: 0px;
+    }
+    </style>
+</head>
+<body style="padding-top: 800px">
+    <!-- <body style ="margin:500px"> -->
+    <img src="images/01.jpg"  id="img01" style="width: 200px;">
+</body>
+</html>
+ <script type="text/javascript">
+
+        var obj = document.getElementById("img01");
+        obj.onclick = get_xy;
+
+        function get_xy(e){
+
+   //窗口左边
+        var clientX = e ? e.clientX : event.clientX;
+        var clientY = e ? e.clientY : event.clientY;
+        // // 屏幕坐标
+        var screenX = e ? e.screenX : event.screenX;
+        var screenY = e ? e.screenY : event.screenY;
+        // 网页坐标 	//火狐浏览器都没有值(可能是浏览器适配问题，以后找原因)
+
+        var event = event;
+        var pageX = event ? event.offsetX : e.pageX;
+        var pageY = event ? event.offsetY : e.pageY;
+        // var pageX = e ? e.pageX : event.offsetX;
+        // var pageY = e ? e.pageY : event.offsetY;
+        var str = "窗口坐标" + clientX + "," + clientY;
+        str += "\n网页坐标" + pageX + "," + pageY;
+        str += "\n屏幕坐标" + screenX + "," + screenY;
+        alert(str);
+
+
+        }
+
+
+     
+    
+    </script>

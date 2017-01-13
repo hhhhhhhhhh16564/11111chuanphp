@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript">
+/*
+手机验证：
+	（1）长度为11位
+	（2）是不是纯数字
+	（3）手机号是不能为空
+*/
+//（1）获取用户用户信息
+var tel = window.prompt("请输入你的手机号码");
+//（2）调用函数：对返回值进行判断，为true是合法的手机号，为false为不合法的手机号
+checkTel(tel);
+
+//（3）函数：验证一个手机号码是否合法
+function checkTel(str)
+{
+	//先判断手机号码是否为空
+	if(isEmpty(str))
+	{
+		document.write("手机号码不能为空！");
+	}else if(str.length!=11)
+	{
+		//判断手机号码的长度是否是11位
+		//字符串对象String，有一个属性length，取得字符串中字符的个数
+		document.write("手机号码位数不对！");
+	}else if(isNaN(str))
+	{
+		//手机号码纯数字的判断
+		document.write("手机号码中含有非法字符！");
+	}else
+	{
+		//如果上面都不满足，则输出默认值
+		document.write("手机号码输入正确！");
+	}
+}
+//（4）函数定义：主要用于判断用户输入是否为空
+function isEmpty(value)
+{
+	if(value=="")
+	{
+		return true;
+	}
+	return false;
+}
+
+</script>
+</head>
+
+<body>
+</body>
+</html>

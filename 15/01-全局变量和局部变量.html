@@ -1,0 +1,23 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <script type="text/javascript">
+    var num = 1;
+    function init() {
+        num++;
+        var obj = document.getElementById("img01");
+        obj.src = "images/dd_scroll_" + num + ".jpg";
+
+        setTimeout("init()", 1000);
+        if (num >= 6) {
+            num = 0;
+        }
+    }
+    </script>
+</head>
+<body onload="init()">
+    <img src="images/dd_scroll_1.jpg" id="img01">
+</body>
+</html>

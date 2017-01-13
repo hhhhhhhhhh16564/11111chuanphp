@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript">
+//实例：按字母的先后顺序排列
+var arr = ["b","c","d","a"];
+arr.sort();//按字母的升序
+arr.reverse();  //将数组元素颠倒排列
+document.write(arr+"<hr>");
+
+//实例：按数值大小进行排序
+var arr = [1,2,13,12,21,24,4,3,20];
+arr.sort(orderby); //将函数的地址传给sort方法
+function orderby(a,b)
+{
+	return a-b;
+}
+document.write(arr+"<hr>");
+//实例：按拼音的先后顺序排列
+var arr = ["安庆市","安徽省","河南省","河北省","北京市"];
+arr.sort(orderby2);
+function orderby2(str1,str2)
+{
+	return str1.localeCompare(str2);
+}
+document.write(arr);
+</script>
+</head>
+
+<body>
+</body>
+</html>

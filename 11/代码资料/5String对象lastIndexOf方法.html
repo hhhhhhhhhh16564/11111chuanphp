@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript">
+//实例：判断上传文件的类型，图片扩展名["jpg","gif","png"]
+var filename = "2014072.1102.332.jpg";
+function checkFilename(filename)
+{
+	var arr = ["jpg","gif","png"];
+	//获取最后一个小数点的位置号
+	var index = filename.lastIndexOf("."); //取出最后一个点的索引号
+	//取出文件扩展名
+	var ext = filename.substr(index+1);  //在下一个索引号开始取
+	//将取出的扩展名与数组中的元素进行比对
+	for(var i=0;i<arr.length;i++)
+	{
+		if(ext == arr[i])
+		{
+			return true;
+		}
+	}
+	return false;
+}
+//调用函数
+if(checkFilename(filename))
+{
+	document.write("文件名合法");
+}else
+{
+	document.write("文件名不合法");
+}
+</script>
+</head>
+
+<body>
+</body>
+</html>

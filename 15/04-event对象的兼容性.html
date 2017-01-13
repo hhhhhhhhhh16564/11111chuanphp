@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <script type="text/javascript">
+    function get_xy(e) {
+        var obj = document.getElementById("img01");
+        //窗口左边
+        var clientX = e ? e.clientX : event.clientX;
+        var clientY = e ? e.clientY : event.clientY;
+        // // 屏幕坐标
+        var screenX = e ? e.screenX : event.screenX;
+        var screenY = e ? e.screenY : event.screenY;
+        // 网页坐标 	//火狐浏览器都没有值(可能是浏览器适配问题，以后找原因)
+
+        var event = event;
+        var pageX = event ? event.offsetX : e.pageX;
+        var pageY = event ? event.offsetY : e.pageY;
+        // var pageX = e ? e.pageX : event.offsetX;
+        // var pageY = e ? e.pageY : event.offsetY;
+        var str = "窗口坐标" + clientX + "," + clientY;
+        str += "\n网页坐标" + pageX + "," + pageY;
+        str += "\n屏幕坐标" + screenX + "," + screenY;
+        alert(str);
+    }
+    </script>
+    <style type="text/css">
+    body,
+    img {
+        margin: 0px;
+        padding: 0px;
+    }
+    </style>
+</head>
+<body style="padding-top: 800px">
+    <!-- <body style ="margin:500px"> -->
+    <img src="images/01.jpg" onclick="get_xy(event)" id="img01" style="width: 200px;">
+</body>
+</html>
+<!-- 
+DOM中event对象的属性
+clientX：获取当前事件距离窗口左边的距离；
+clientY：当前事件发生时距离窗口顶端的距离；
+pageX：当前事件所在网页中的x坐标
+pageY：当前事件所在网页中的y坐标；
+screenX：当前事件所在屏幕中的x坐标；
+screenY：当前事件所在屏幕中的y坐标；
+type：当前事件的类型
+IE中event对象的属性
+clientX、clientY：窗口坐标
+screenX、screenY：屏幕坐标
+x、y：窗口坐标
+offsetX、offsetY：相对当前目标对象的坐标，比如：单击图片时，距离图片顶端和左端坐标
+…… -->

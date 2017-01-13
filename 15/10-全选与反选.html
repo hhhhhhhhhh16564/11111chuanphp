@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <script type="text/javascript">
+    function select_all(obj) {
+        var arr = document.form1.hobby;
+        if (obj.checked) {
+            for (var i = 0; i < arr.length; i++) {
+                arr[i].checked = true;
+            }
+        } else {
+            for (var i = 0; i < arr.length; i++) {
+                arr[i].checked = false;
+            }
+        }
+    }
+    function select_no_all() {
+        var arr = document.form1.hobby;
+        for (var i = 0; i < arr.length; i++) {
+            if (arr[i].checked) {
+                arr[i].checked = false
+            } else {
+                arr[i].checked = true;
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <form name="form1">
+        <fieldset>
+            <legend>选择你感兴趣的类</legend>
+            <input type="checkbox" name="hobby" value="音乐" />音乐
+            <input type="checkbox" name="hobby" value="看书" />看书
+            <input type="checkbox" name="hobby" value="体育" />体育
+            <input type="checkbox" name="hobby" value="足球" />足球
+            <input type="checkbox" name="hobby" value="电脑" />电脑
+            <br />
+            <input type="checkbox" name="hobby" value="小说" />小说
+            <input type="checkbox" name="hobby" value="文学" />文学
+            <input type="checkbox" name="hobby" value="动漫" />动漫
+            <input type="checkbox" name="hobby" value="经济" />经济
+            <input type="checkbox" name="hobby" value="电影" />电影
+            <br />
+            <input type="checkbox" name="hobby" value="美术" />美术
+            <input type="checkbox" name="hobby" value="管理" />管理
+            <input type="checkbox" name="hobby" value="历史" />历史
+            <input type="checkbox" name="hobby" value="旅游" />旅游
+            <input type="checkbox" name="hobby" value="戏剧" />戏剧
+        </fieldset>
+        <input type="checkbox" onclick="select_all(this)" value="全选" />全选
+        <input type="checkbox" onclick="select_no_all()" value="反选" />反选
+    </form>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en" onclick="init()">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <script type="text/javascript">
+    // 
+    // 如下边 不加var a时候，则什么也不输出，加上后，输出 1000
+    function init() {
+        var a;
+        var b = a ? 11 : 1000;
+        document.write("**" + b + "**");
+    }
+    function init1() {
+        var b = typeof(c);
+        document.write("**" + b + "**");
+    }
+    // 输出 **undefined**
+    function init2() {
+        document.write("**" + typeof(c) + "**");
+    } // 输出 **undefined**
+    </script>
+</head>
+<body>
+</body>
+</html>

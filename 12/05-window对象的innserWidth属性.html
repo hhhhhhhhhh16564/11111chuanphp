@@ -8,7 +8,6 @@
 		window.name = "current";//当前窗口的名称
 		var width = window.innerWidth ? window.innerWidth : document.documentElement.clientWidth;
 		var height = width.innerHeight ? width.innerHeight : document.documentElement.clientHeight;
-
 		var str = "宽度:"+width+"高度: "+ height;
 		document.write(str+ "," + window.name);
 
@@ -16,13 +15,8 @@
 			if (window.confirm("你真的要删除吗?")) {
 				// 通过PHP连接MySql，自画像真的数据库
 				window.alert("id=345的文章已经被删除");
-
 			}
-
-
 		}
-
-
 	</script>
 </head>
 <body>

@@ -24,7 +24,14 @@
 	echo "共可经过改路口{$n}次";
 
 
+   $link = mysql_connect("localhost", "root", "12345678");
 
+   if ($link) {
+   	
+   	echo "OK";
+   }else{
+   	echo "ERROR";
+   }
 
 
 

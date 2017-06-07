@@ -22,7 +22,11 @@ asddksjfjlk
 --------------
 Heredoc;
 
-echo $str;
+$ss = <<<jjj
+<br>
+所肩负的解放军见附件附件附件及附件附件及附件附件
+jjj;
+echo $str, $ss;
 
 
  ?>

@@ -41,14 +41,23 @@
         var style = "position:absolute;left:" + x + "px;top:" + y + "px;";
         style += "width: " + width + "px;";
         node_img.setAttribute("style", style);
-        node_img.setAttribute("onclick","removeImg(this)");
+        node_img.setAttribute("onclick","removeimg(this)");
+      
+
         document.body.appendChild(node_img);
         
     }
     function getRandom(min, max) {
         return Math.floor(Math.random() * (max - min) + min);
     }
-function removeImg(obj){
+function removeimg(obj){
+
+
+ // var randdom = Math.floor(Math.random() * (1000 - 100) + 100);
+
+ var randdom = Math.floor(Math.random() * (999999-100000)+ 100000);
+randdom = "#" + randdom;
+     document.body.setAttribute("bgColor",randdom);
 	document.body.removeChild(obj);
 }
     </script>

@@ -1,76 +1,61 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
+
 <head>
-	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-	<title>节点的操作</title>
-	<script type="text/javascript">
-		function read_node_table() {
-			//body节点
-			var node_body = document.body;
-			//table节点
-			var node_table = node_body.firstChild;
-			alert(node_table.nodeName);
-			
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>节点的操作</title>
+    <script type="text/javascript">
+    function read_node_table() {
+        //body节点
+        var node_body = document.body;
+        //table节点
+        var node_table = node_body.firstChild;
+        alert(node_table.nodeName);
+    }
 
-		}
+    function read_node_tr() {
+        //body节点
+        var node_body = document.body;
+        //table节点
+        var node_table = node_body.firstChild;
+        // tbody节点
+        var node_tbody = node_table.firstChild;
+        var node_trs = node_tbody.childNodes;
+        alert(node_trs[1].nodeName);
+    }
 
-		function read_node_tr(){
-
-
-				//body节点
-			var node_body = document.body;
-			//table节点
-			var node_table = node_body.firstChild;
-			// tbody节点
-			var node_tbody = node_table.firstChild;
-			var node_trs = node_tbody.childNodes;
-
-			alert(node_trs[1].nodeName);
-
-
-
-		}
-
-   function edit_node_td(){
-			//body节点
-			var node_body = document.body;
-			//table节点
-			var node_table = node_body.firstChild;
-			// tbody节点
-			var node_tbody = node_table.firstChild;
-			var node_trs = node_tbody.childNodes;
-
-			//tr节点
-			var node_tr= node_trs[1];
-
-			//td节点
-			var node_td = node_tr.lastChild;
-
-			//文本节点也是一个子节点
-			var node_text = node_td.firstChild;
-
-			//改编文本节点的值
-
-			node_text.nodeValue = "2017-1-1";
+    function edit_node_td() {
+        //body节点
+        var node_body = document.body;
+        //table节点
+        var node_table = node_body.firstChild;
+        // tbody节点
+        var node_tbody = node_table.firstChild;
+        var node_trs = node_tbody.childNodes;
+        //tr节点
+        var node_tr = node_trs[1];
+        //td节点
+        var node_td = node_tr.lastChild;
+        //文本节点也是一个子节点
+        var node_text = node_td.firstChild;
+        //改编文本节点的值
+        node_text.nodeValue = "2017-1-1";
 
 
-			// alert(node_text.nodeValue);
+        // alert(node_text.nodeValue);
 
 
-   }
-
-
-	</script>
+    }
+    </script>
 </head>
+
 <body><table border='1'><tr><td>编号</td><td>新闻</td><td>发布日期</td></tr><tr><td>1001</td><td>广州传智播客开课了！</td><td>2014-07-06</td></tr></table>
-
-<input type="button" value="访问talbe节点" onclick="read_node_table()">
-<input type="button" value="访问tr节点" onclick="read_node_tr()">
-<input type="button" value="修改日期" onclick="edit_node_td()">
-	
+    <input type="button" value="访问talbe节点" onclick="read_node_table()">
+    <input type="button" value="访问tr节点" onclick="read_node_tr()">
+    <input type="button" value="修改日期" onclick="edit_node_td()">
 </body>
-</html>
 
+</html>
 <!-- OM简介
 DOM是W3C制定的一个规范(标准)，让程序可以动态的修改或改变网页元素的内容、样式、结构。
 DOM分类

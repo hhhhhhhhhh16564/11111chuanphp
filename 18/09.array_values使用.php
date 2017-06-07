@@ -7,10 +7,10 @@
 <body>
 	<?php 
 	// 将非枚举数组，转换为枚举数组
-	$arr["a"] = 100;
-	$arr[10] = 200;
+	$arr["0"] = 100;
+	$arr[5] = 200;
 	$arr["b"] = 300;
-	$arr[20] = 400;
+	$arr[2] = 400;
 	$arr2 = array_values($arr);
 	dump($arr2);
 
